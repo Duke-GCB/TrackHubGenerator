@@ -1,7 +1,0 @@
-assembly: hg38
-tracks:
-  -
-    track_name: E2F1_3merSVR_Schipper2015
-    bigwig_url: combined_E2F1_SVR.model_SVRpredict_E2F1_SVR_SVR-scores_browser-track.bw
-    short_label: E2F1 sites (SVR)
-    long_label: E2F1 binding sites predicted by 3mer SVR model (Schipper et al. 2015)

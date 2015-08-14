@@ -7,5 +7,5 @@ python python/render/render.py yaml/hub/hub.yaml hub
 python python/render/render.py yaml/genomes/genomes.yaml genomes
 
 # Render trackDbs
-python python/render/render.py yaml/tracks/hg19.yaml trackDb
-python python/render/render.py yaml/tracks/hg38.yaml trackDb
+python python/render/render.py yaml/tracks/trackDb.yaml trackDb #hg19
+python python/render/render.py yaml/tracks/trackDb.yaml trackDb #hg38
