@@ -1,3 +1,11 @@
 #!/bin/bash
 
-PYTHONPATH=. python trackhub_generator/generate_trackDb.py tracks/hg38.yaml trackDb
+# Render hub
+python render/render.py yaml/hub/hub.yaml hub
+
+# Render genomes
+python render/render.py yaml/genomes/genomes.yaml genomes
+
+# Render trackDbs
+python render/render.py yaml/tracks/hg19.yaml trackDb
+python render/render.py yaml/tracks/hg38.yaml trackDb

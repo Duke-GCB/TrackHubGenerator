@@ -1,0 +1,5 @@
+genomes:
+  -
+    assembly: hg19
+  -
+    assembly: hg38

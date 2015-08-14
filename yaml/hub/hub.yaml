@@ -1,0 +1,5 @@
+hub:
+  name: DukeGCBHub_TFDNA
+  short_label: Duke GCB Hub - TF-DNA Predictions
+  long_label: Predictions for TF-DNA binding probability
+  email: gcb-contact@duke.edu
