@@ -1,6 +1,6 @@
-hub {{ name }}
-shortLabel {{ short_label }}
-longLabel {{ long_label }}
-genomesFile {{ genomes_file | default('genomes.txt') }}
-email {{ email }}
-descriptionUrl {{ description_url | default('http://www.genome.duke.edu') }}
+hub {{ hub.name }}
+shortLabel {{ hub.short_label }}
+longLabel {{ hub.long_label }}
+genomesFile {{ hub.genomes_file | default('genomes.txt') }}
+email {{ hub.email }}
+descriptionUrl {{ hub.description_url | default('http://www.genome.duke.edu') }}
