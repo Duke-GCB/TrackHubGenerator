@@ -16,7 +16,7 @@ $(TMPDIR)/combined-hg38.bed: $(TMPDIR)/combined-hg19.bed
 	liftOver $(TMPDIR)/combined-hg19.bed hg19ToHg38.over.chain.gz $(TMPDIR)/combined-hg38-liftover.bed $(TMPDIR)/unmapped.bed
 	scripts/combine_bed_and_sort.sh $(TMPDIR)/combined-hg38-liftover.bed > $(TMPDIR)/combined-hg38.bed
 
-# Step 3 - process to avoid overlapping regions
+# Step 3 - process to single width, hopefully avoiding overlapping regions
 $(TMPDIR)/combined-hg19-1w.bed:  $(TMPDIR)/combined-hg19.bed
 	python python/bedgraph_utils/slice.py $(TMPDIR)/combined-hg19.bed > $(TMPDIR)/combined-hg19-1w.bed
 
@@ -32,6 +32,7 @@ $(TMPDIR)/hg38.sizes:
 $(TMPDIR)/combined-hg19.bw: $(TMPDIR)/hg19.sizes $(TMPDIR)/combined-hg19-1w.bed
 	bedGraphToBigWig $(TMPDIR)/combined-hg19-1w.bed $(TMPDIR)/hg19.sizes $(TMPDIR)/combined-hg19.bw
 
+# the liftover-converted file has overlapping regions
 $(TMPDIR)/combined-hg38.bw: $(TMPDIR)/hg38.sizes $(TMPDIR)/combined-hg38-1w.bed
 	bedGraphToBigWig $(TMPDIR)/combined-hg38-1w.bed $(TMPDIR)/hg38.sizes $(TMPDIR)/combined-hg38.bw
 
