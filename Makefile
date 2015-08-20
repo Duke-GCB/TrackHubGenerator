@@ -5,7 +5,7 @@ OUTDIR=./out
 
 all: tempdir outdir bigwigs
 
-bigwigs: $(OUTDIR)/$(FILE_PREFIX)-hg19-combined-1w-sorted.bw $(OUTDIR)/$(FILE_PREFIX)-hg38-combined-1w-sorted.bw
+bigwigs: $(OUTDIR)/$(FILE_PREFIX)-hg19-1w.bw $(OUTDIR)/$(FILE_PREFIX)-hg38-1w.bw
 
 tempdir:
 	mkdir -p $(TMPDIR)
@@ -40,7 +40,7 @@ $(TMPDIR)/%.sizes:
 	fetchChromSizes $* > $@
 
 # 5.2 bigwig
-$(OUTDIR)/$(FILE_PREFIX)-%-combined-1w-sorted.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w-sorted.bed $(TMPDIR)/%.sizes
+$(OUTDIR)/$(FILE_PREFIX)-%-1w.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w-sorted.bed $(TMPDIR)/%.sizes
 	bedGraphToBigWig $^ $@
 
 ifndef BEDFILES_DIR
