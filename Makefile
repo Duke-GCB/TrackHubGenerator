@@ -15,9 +15,13 @@ $(TMPDIR)/combined-hg19-1w.bed: $(TMPDIR)/combined-hg19.bed
 	python python/bedgraph_utils/slice.py $(TMPDIR)/combined-hg19.bed > $(TMPDIR)/combined-hg19-1w.bed
 
 # 3 - generate an hg38-compatible version using liftOver
-# TODO: download the chain if needed
-$(TMPDIR)/combined-hg38-1w.bed: $(TMPDIR)/combined-hg19-1w.bed
-	liftOver $(TMPDIR)/combined-hg19-1w.bed hg19ToHg38.over.chain.gz $(TMPDIR)/combined-hg38-1w.bed $(TMPDIR)/unmapped.bed
+# 3.1 download chain
+$(TMPDIR)/hg19ToHg38.over.chain.gz:
+	curl -sLo $(TMPDIR)/hg19ToHg38.over.chain.gz http://hgdownload.cse.ucsc.edu/gbdb/hg19/liftOver/hg19ToHg38.over.chain.gz
+
+# 3.2 liftOver
+$(TMPDIR)/combined-hg38-1w.bed: $(TMPDIR)/hg19ToHg38.over.chain.gz $(TMPDIR)/combined-hg19-1w.bed
+	liftOver $(TMPDIR)/combined-hg19-1w.bed $(TMPDIR)/hg19ToHg38.over.chain.gz $(TMPDIR)/combined-hg38-1w.bed $(TMPDIR)/unmapped.bed
 
 # 4 - sort and uniq the files. Liftover may change the order, so we sort after liftover
 # 4.1 hg19
