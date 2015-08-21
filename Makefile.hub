@@ -1,34 +1,29 @@
-# Makefile for generating bigwig tracks from directories of bedfiles
+# Makefile for generating track hub directory
 
 HUBROOT=./hubroot
+YAMLROOT=./yaml
 
-all: templates
+all: hubroot hub genomes tracks
 
 hubroot:
 	mkdir -p $(HUBROOT)
 	mkdir -p $(HUBROOT)/hg19
 	mkdir -p $(HUBROOT)/hg38
 
-templates: hubroot hub genomes tracks
-
 hub: hubroot $(HUBROOT)/hub.txt
 genomes: hubroot $(HUBROOT)/genomes.txt
 tracks: hubroot $(HUBROOT)/hg19/trackDb.txt $(HUBROOT)/hg38/trackDb.txt
 
-# For trackDb.txt
-$(HUBROOT)/%/trackDb.txt:
-	python python/render/render.py yaml/tracks/trackDb.yaml trackDb > $@
-
 # Writing explicit rules here since make < 3.81 can't figure out which to use
 
 $(HUBROOT)/hub.txt:
-	python python/render/render.py yaml/hub/hub.yaml hub > $@
+	python python/render/render.py $(YAMLROOT)/hub/hub.yaml hub > $@
 
 $(HUBROOT)/genomes.txt:
-	python python/render/render.py yaml/genomes/genomes.yaml genomes > $@
+	python python/render/render.py $(YAMLROOT)/genomes/genomes.yaml genomes > $@
 
 $(HUBROOT)/%/trackDb.txt:
-	python python/render/render.py yaml/tracks/trackDb.yaml trackDb > $@
+	python python/render/render.py $(YAMLROOT)/tracks/trackDb.yaml trackDb > $@
 
 clean:
 	rm -rf $(HUBROOT)
