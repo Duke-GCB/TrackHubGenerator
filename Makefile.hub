@@ -23,7 +23,7 @@ $(HUBROOT)/genomes.txt:
 	python python/render/render.py $(YAMLROOT)/genomes/genomes.yaml genomes > $@
 
 $(HUBROOT)/%/trackDb.txt:
-	python python/render/render.py $(YAMLROOT)/tracks/trackDb.yaml trackDb > $@
+	python python/render/render_tracks.py --prefixes E2F1 --genome $* --variants 1w maxprob > $@
 
 clean:
 	rm -rf $(HUBROOT)
