@@ -1,7 +1,7 @@
 # Makefile for generating bigwig tracks from directories of bedfiles
 
 TMPDIR=./tmp
-HUBROOT=./out
+HUBROOT=./hubroot
 
 .PHONY: hubroot
 
