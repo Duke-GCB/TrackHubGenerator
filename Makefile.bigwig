@@ -18,7 +18,7 @@ hubroot:
 
 # 1 - combine the per-chrom bed files in the data directory and remove the label column
 $(TMPDIR)/$(FILE_PREFIX)-hg19-combined.bed:
-	scripts/combine_bed.sh $(BEDFILES_DIR)/*.bed | scripts/remove_label_column.sh > $@
+	scripts/combine_bed.sh $(BEDFILES_DIR)/*.bed > $@
 
 # 2 - process to single-base width
 $(TMPDIR)/$(FILE_PREFIX)-hg19-combined-1w.bed: $(TMPDIR)/$(FILE_PREFIX)-hg19-combined.bed
