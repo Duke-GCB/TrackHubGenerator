@@ -1,17 +1,20 @@
 # Makefile for generating bigwig tracks from directories of bedfiles
 
 TMPDIR=./tmp
-OUTDIR=./out
+HUBROOT=./out
 
-all: tempdir outdir bigwigs
+.PHONY: hubroot
 
-bigwigs: $(OUTDIR)/$(FILE_PREFIX)-hg19-1w.bw $(OUTDIR)/$(FILE_PREFIX)-hg38-1w.bw
+all: tempdir hubroot bigwigs
+
+bigwigs: $(HUBROOT)/hg19/$(FILE_PREFIX)-hg19-1w.bw $(HUBROOT)/hg38/$(FILE_PREFIX)-hg38-1w.bw
 
 tempdir:
 	mkdir -p $(TMPDIR)
 
-outdir:
-	mkdir -p $(OUTDIR)
+hubroot:
+	mkdir -p $(HUBROOT)/hg19
+	mkdir -p $(HUBROOT)/hg38
 
 # 1 - combine the per-chrom bed files in the data directory and remove the label column
 $(TMPDIR)/$(FILE_PREFIX)-hg19-combined.bed:
@@ -40,7 +43,10 @@ $(TMPDIR)/%.sizes:
 	fetchChromSizes $* > $@
 
 # 5.2 bigwig
-$(OUTDIR)/$(FILE_PREFIX)-%-1w.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w-sorted.bed $(TMPDIR)/%.sizes
+$(HUBROOT)/hg19/$(FILE_PREFIX)-%-1w.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w-sorted.bed $(TMPDIR)/%.sizes
+	bedGraphToBigWig $^ $@
+
+$(HUBROOT)/hg38/$(FILE_PREFIX)-%-1w.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w-sorted.bed $(TMPDIR)/%.sizes
 	bedGraphToBigWig $^ $@
 
 ifndef BEDFILES_DIR
