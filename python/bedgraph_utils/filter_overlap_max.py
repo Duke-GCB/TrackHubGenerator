@@ -5,59 +5,26 @@ import csv
 from bedgraph_utils import *
 
 
-class OverlapMaxValue(object):
-    def __init__(self, writer=None):
-        self.rows = []
-        self.writer = writer
-
-    def push_row(self, row):
-        self.rows.append(row)
-        self.process_overlaps()
-
-    def process_overlaps(self):
-        if len(self.rows) < 2:
-            return
-        overlaps = []
-        for i in range(len(self.rows) - 1):
-            a = self.rows[i]
-            b = self.rows[i + 1]
-            a_end = a[COL_END]
-            b_start = b[COL_START]
-            if b_start > a_end:
-                # flush overlaps
-                overlaps = self.rows[:i+1]
-                self.rows = self.rows[i+1:]
-                break
-        if len(overlaps) > 0:
-            self.flush_rows(overlaps)
-
-    @staticmethod
-    def rows_covering_base(rows, base):
-        cover = []
-        for row in rows:
-            if row[COL_START] <= base < row[COL_END]:
-                cover.append(row)
-        return cover
-
-    def flush(self):
-        self.flush_rows(self.rows)
-
-    def flush_rows(self, rows):
-        chrom = rows[0][COL_CHROM]
-        start = min([x[COL_START] for x in rows])
-        end = max([x[COL_END] for x in rows])
-        for base in range(start, end):
-            overlap_rows = self.rows_covering_base(rows, base)
-            value = max([x[COL_VALUE] for x in overlap_rows])
-            row = (chrom, base, base + 1, value)
-            if self.writer is not None:
-                self.writer.writerow(row)
-            else:
-                print row
-
-
 def convert_row(row):
     return row[COL_CHROM], int(row[COL_START]), int(row[COL_END]), float(row[COL_VALUE])
+
+
+def find_gap(queue):
+    if len(queue) < 2:
+        return None
+    index = None
+    chrom = queue[0][COL_CHROM]
+    range_end = queue[0][COL_END]
+    for i in range(0,len(queue)):
+        if queue[i][COL_START] >= range_end or queue[i][COL_CHROM] != chrom:
+            index = i
+            break
+    return index
+
+
+def process_region(region):
+    # TODO: run max value in here
+    return region
 
 
 def filter_overlap_max(input_file, output_file):
@@ -69,11 +36,25 @@ def filter_overlap_max(input_file, output_file):
     """
     reader = csv.reader(input_file, delimiter='\t')
     writer = csv.writer(output_file, delimiter='\t')
-    overlap_max_value = OverlapMaxValue(writer)
+    queue = []
     for text_row in reader:
         row = convert_row(text_row)
-        overlap_max_value.push_row(row)
-    overlap_max_value.flush()
+        # Add the row to the queue
+        queue.append(row)
+        # Check, from the beginning of the queue if there is a gap
+        gap_index = find_gap(queue)
+        # if no gap, continue
+        if gap_index is None:
+            continue
+        # if gap, process everything before the gap
+        overlap_region = queue[:gap_index]
+        queue = queue[gap_index:]
+        maximized = process_region(overlap_region)
+        for each in maximized:
+            writer.writerow(each)
+    last_region = process_region(queue)
+    for each in last_region:
+        writer.writerow(each)
 
 
 if __name__ == '__main__':
