@@ -32,3 +32,4 @@ RUN apt-get install -y \
 RUN pip install -r requirements.txt
 
 WORKDIR /opt/TrackHubGenerator/
+ENV PATH /opt/TrackHubGenerator:$PATH
