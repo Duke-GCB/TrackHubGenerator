@@ -22,9 +22,19 @@ def find_gap(queue):
     return index
 
 
+def rows_covering_base(rows, base):
+    for row in rows:
+        if row[COL_START] <= base < row[COL_END]:
+            yield row
+
+
 def process_region(region):
-    # TODO: run max value in here
-    return region
+    chrom = region[0][COL_CHROM]
+    start = min([x[COL_START] for x in region])
+    end = max([x[COL_END] for x in region])
+    for base in range(start, end):
+        value = max([x[COL_VALUE] for x in rows_covering_base(region, base)])
+        yield (chrom, base, base + 1, value)
 
 
 def filter_overlap_max(input_file, output_file):
@@ -49,12 +59,11 @@ def filter_overlap_max(input_file, output_file):
         # if gap, process everything before the gap
         overlap_region = queue[:gap_index]
         queue = queue[gap_index:]
-        maximized = process_region(overlap_region)
-        for each in maximized:
-            writer.writerow(each)
-    last_region = process_region(queue)
-    for each in last_region:
-        writer.writerow(each)
+        for r in process_region(overlap_region):
+            writer.writerow(r)
+    # Flush the last region
+    for r in process_region(queue):
+        writer.writerow(r)
 
 
 if __name__ == '__main__':
