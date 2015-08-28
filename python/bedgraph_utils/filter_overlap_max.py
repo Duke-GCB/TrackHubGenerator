@@ -19,6 +19,7 @@ def find_gap(queue):
         if queue[i][COL_START] >= range_end or queue[i][COL_CHROM] != chrom:
             index = i
             break
+        range_end = queue[i][COL_END]
     return index
 
 
