@@ -20,53 +20,40 @@ hubroot:
 $(TMPDIR)/$(FILE_PREFIX)-hg19-combined.bed:
 	scripts/combine_bed.sh $(BEDFILES_DIR)/*.bed > $@
 
-# 2 - process to non-overlapping files
-# 2.1 - single base width
-$(TMPDIR)/$(FILE_PREFIX)-hg19-combined-1w.bed: $(TMPDIR)/$(FILE_PREFIX)-hg19-combined.bed
-	python python/bedgraph_utils/slice.py $< > $@
-
-# 2.2 - max-probability
-$(TMPDIR)/$(FILE_PREFIX)-hg19-combined-maxprob.bed: $(TMPDIR)/$(FILE_PREFIX)-hg19-combined.bed
-	python python/bedgraph_utils/filter_overlap_max.py $< > $@
-
-# 3 - generate hg38-compatible versions using liftOver
-# 3.1 download chain
+# 2 - generate hg38-compatible versions using liftOver
+# 2.1 download chain
 $(TMPDIR)/hg19ToHg38.over.chain.gz:
 	curl -sLo $@ http://hgdownload.cse.ucsc.edu/gbdb/hg19/liftOver/hg19ToHg38.over.chain.gz
 
-# 3.2 liftOver for single base width
-$(TMPDIR)/$(FILE_PREFIX)-hg38-combined-1w.bed: $(TMPDIR)/$(FILE_PREFIX)-hg19-combined-1w.bed $(TMPDIR)/hg19ToHg38.over.chain.gz
-	liftOver $^ $@ $(TMPDIR)/$(FILE_PREFIX)-1w-unmapped.bed
+# 2.2 liftOver
+$(TMPDIR)/$(FILE_PREFIX)-hg38-combined.bed: $(TMPDIR)/$(FILE_PREFIX)-hg19-combined.bed $(TMPDIR)/hg19ToHg38.over.chain.gz
+	liftOver $^ $@ $(TMPDIR)/$(FILE_PREFIX)-unmapped.bed
 
-# 3.3 liftOver for maxprob
-$(TMPDIR)/$(FILE_PREFIX)-hg38-combined-maxprob.bed: $(TMPDIR)/$(FILE_PREFIX)-hg19-combined-maxprob.bed $(TMPDIR)/hg19ToHg38.over.chain.gz
-	liftOver $^ $@ $(TMPDIR)/$(FILE_PREFIX)-maxprob-unmapped.bed
+# 3 - process to non-overlapping files
+# 3.1 - single base width
+$(TMPDIR)/$(FILE_PREFIX)-%-combined-1w.bed: $(TMPDIR)/$(FILE_PREFIX)-%-combined.bed
+	python python/bedgraph_utils/slice.py $< | scripts/sort_uniq_bed.sh > $@
 
-# 4 - sort and uniq the files. Liftover may change the order, so we sort after liftover
-# 4.1 sort/uniq single base width
-$(TMPDIR)/$(FILE_PREFIX)-%-combined-1w-sorted.bed: $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w.bed
-	scripts/sort_uniq_bed.sh $< > $@
+# 3.2 - max-probability
+$(TMPDIR)/$(FILE_PREFIX)-%-combined-maxprob.bed: $(TMPDIR)/$(FILE_PREFIX)-%-combined.bed
+	scripts/sort_bed.sh $< | python python/bedgraph_utils/filter_overlap_max.py > $@
 
-# 4.2 sort/uniq max prob
-$(TMPDIR)/$(FILE_PREFIX)-%-combined-maxprob-sorted.bed: $(TMPDIR)/$(FILE_PREFIX)-%-combined-maxprob.bed
-	scripts/sort_uniq_bed.sh $< > $@
-
-# 5 - Convert to bigWig
-# 5.1 chrom sizes
+# 4 - Convert to bigWig
+# 4.1 chrom sizes
 $(TMPDIR)/%.sizes:
 	fetchChromSizes $* > $@
 
-# 5.2 bigwig
-$(HUBROOT)/hg19/$(FILE_PREFIX)-%-1w.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w-sorted.bed $(TMPDIR)/%.sizes
+# 4.2 bigwig
+$(HUBROOT)/hg19/$(FILE_PREFIX)-%-1w.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w.bed $(TMPDIR)/%.sizes
 	bedGraphToBigWig $^ $@
 
-$(HUBROOT)/hg38/$(FILE_PREFIX)-%-1w.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w-sorted.bed $(TMPDIR)/%.sizes
+$(HUBROOT)/hg38/$(FILE_PREFIX)-%-1w.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w.bed $(TMPDIR)/%.sizes
 	bedGraphToBigWig $^ $@
 
-$(HUBROOT)/hg19/$(FILE_PREFIX)-%-maxprob.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-maxprob-sorted.bed $(TMPDIR)/%.sizes
+$(HUBROOT)/hg19/$(FILE_PREFIX)-%-maxprob.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-maxprob.bed $(TMPDIR)/%.sizes
 	bedGraphToBigWig $^ $@
 
-$(HUBROOT)/hg38/$(FILE_PREFIX)-%-maxprob.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-maxprob-sorted.bed $(TMPDIR)/%.sizes
+$(HUBROOT)/hg38/$(FILE_PREFIX)-%-maxprob.bw: $(TMPDIR)/$(FILE_PREFIX)-%-combined-maxprob.bed $(TMPDIR)/%.sizes
 	bedGraphToBigWig $^ $@
 
 ifndef BEDFILES_DIR
