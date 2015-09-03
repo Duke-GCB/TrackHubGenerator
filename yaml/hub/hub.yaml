@@ -1,5 +1,5 @@
 hub:
   name: DukeGCBHub_TFDNA
-  short_label: Duke GCB Hub - TF-DNA Predictions
-  long_label: Predictions for TF-DNA binding probability
+  short_label: Duke GCB - TF-DNA Binding Predictions
+  long_label:  Predictions of in vitro TF-DNA binding levels, according to SVR models trained on gcPBM data
   email: gcb-contact@duke.edu
