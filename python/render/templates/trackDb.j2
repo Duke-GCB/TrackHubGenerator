@@ -8,5 +8,6 @@ visibility {{ t.visibility | default('full') }}
 color {{ t.color | default('0,0,0') }}
 altColor {{ t.alt_color | default('0,100,200') }}
 priority {{ t.priority | default('20') }}
+viewLimits {{ t.view_limits | default('0:1') }}
 
 {% endfor %}
