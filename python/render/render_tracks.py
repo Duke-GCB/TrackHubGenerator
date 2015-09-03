@@ -1,32 +1,32 @@
 __author__ = 'dcl9'
+from jinja2 import Environment, PackageLoader
 from render import render_template
 import argparse
+import yaml
+
+def generate_track_dict(protein, assembly, site_width):
+    env = Environment(loader=PackageLoader(package_name='render'))
+    template = env.get_template('tracks.yaml.j2')
+    vals = { 'protein' : protein, 'assembly': assembly, 'site_width' : site_width}
+    yaml_str = template.render(vals)
+    return yaml.load(yaml_str)
 
 
-def generate_track_dict(prefix, variant, genome):
-    track_dict = {'track_name': '{}_SVR-scores_{}'.format(prefix, variant),
-                  'bigwig_url': '{}-{}-{}.bw'.format(prefix, genome, variant),
-                  'short_label': '{}-{}-{}'.format(prefix, genome, variant),
-                  'long_label': '{}_SVR-scores_{}'.format(prefix, variant)}
-    return track_dict
-
-
-def render_track_variants(genome, prefixes, variants):
+def render_track_variants(proteins, assembly, site_width):
     tracks = []
-    for prefix in prefixes:
-        for variant in variants:
-            tracks.append(generate_track_dict(prefix, variant, genome))
+    for protein in proteins:
+        tracks = tracks + generate_track_dict(protein, assembly, site_width)
     trackdb = {'tracks': tracks}
     render_template(trackdb, 'trackDb')
 
 
 def main():
     parser = argparse.ArgumentParser(description='Render trackDb.txt')
-    parser.add_argument('--prefixes', nargs='+')
-    parser.add_argument('--genome')
-    parser.add_argument('--variants', nargs='+')
+    parser.add_argument('--proteins', nargs='+')
+    parser.add_argument('--assembly')
+    parser.add_argument('--site_width')
     args = parser.parse_args()
-    render_track_variants(args.genome, args.prefixes, args.variants)
+    render_track_variants(args.proteins, args.assembly, args.site_width)
 
 
 if __name__ == '__main__':
