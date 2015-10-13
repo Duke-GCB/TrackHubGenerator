@@ -7,7 +7,7 @@ from jinja2 import Environment, PackageLoader
 def render_template(yaml_object, template_name):
     env = Environment(loader=PackageLoader(package_name='render'))
     template = env.get_template(template_name + '.j2')
-    print template.render(yaml_object)
+    print(template.render(yaml_object))
 
 
 def render_yaml_file(yaml_file_name, template_name):
