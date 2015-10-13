@@ -2,7 +2,7 @@
 import sys
 import fileinput
 import csv
-from .bedgraph_utils import *
+from bedgraph_utils import *
 
 
 def convert_row(row):

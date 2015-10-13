@@ -1,6 +1,6 @@
 __author__ = 'dcl9'
 from jinja2 import Environment, PackageLoader
-from .render import render_template
+from render import render_template
 import argparse
 import yaml
 
