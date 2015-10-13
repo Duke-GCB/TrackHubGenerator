@@ -2,7 +2,7 @@
 
 TMPDIR=./tmp
 HUBROOT=./hubroot
-PYTHON=python3
+PYTHON=python
 
 .PHONY: hubroot
 
