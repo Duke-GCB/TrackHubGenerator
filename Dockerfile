@@ -33,4 +33,4 @@ RUN pip3 install -r requirements.txt
 
 WORKDIR /opt/TrackHubGenerator/
 ENV PATH /opt/TrackHubGenerator:$PATH
-CMD ["generate.sh"]
+CMD ["make"]
