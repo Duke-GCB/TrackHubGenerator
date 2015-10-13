@@ -2,6 +2,7 @@
 
 TMPDIR=./tmp
 HUBROOT=./hubroot
+PYTHON=python3
 
 .PHONY: hubroot
 
@@ -32,11 +33,11 @@ $(TMPDIR)/$(FILE_PREFIX)-hg38-combined.bed: $(TMPDIR)/$(FILE_PREFIX)-hg19-combin
 # 3 - process to non-overlapping files
 # 3.1 - single base width
 $(TMPDIR)/$(FILE_PREFIX)-%-combined-1w.bed: $(TMPDIR)/$(FILE_PREFIX)-%-combined.bed
-	python python/bedgraph_utils/slice.py $< | scripts/sort_uniq_bed.sh > $@
+	$(PYTHON) python/bedgraph_utils/slice.py $< | scripts/sort_uniq_bed.sh > $@
 
 # 3.2 - max-probability
 $(TMPDIR)/$(FILE_PREFIX)-%-combined-maxprob.bed: $(TMPDIR)/$(FILE_PREFIX)-%-combined.bed
-	scripts/sort_bed.sh $< | python python/bedgraph_utils/filter_overlap_max.py > $@
+	scripts/sort_bed.sh $< | $(PYTHON) python/bedgraph_utils/filter_overlap_max.py > $@
 
 # 4 - Convert to bigWig
 # 4.1 chrom sizes
