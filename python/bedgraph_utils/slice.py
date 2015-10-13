@@ -21,4 +21,4 @@ def change_bedgraph_range(input, output, width=1):
         writer.writerow(row)
 
 if __name__ == '__main__':
-    change_bedgraph_range(fileinput.input(mode='rb'), sys.stdout)
+    change_bedgraph_range(fileinput.input(mode='r'), sys.stdout)

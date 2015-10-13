@@ -19,4 +19,4 @@ def change_bedgraph_score_scale(input, output, factor=.01):
         writer.writerow(row)
 
 if __name__ == '__main__':
-    change_bedgraph_score_scale(fileinput.input(mode='rb'), sys.stdout)
+    change_bedgraph_score_scale(fileinput.input(mode='r'), sys.stdout)

@@ -92,4 +92,4 @@ def filter_overlap_max(input_file, output_file):
 
 
 if __name__ == '__main__':
-    filter_overlap_max(fileinput.input(mode='rb'), sys.stdout)
+    filter_overlap_max(fileinput.input(mode='r'), sys.stdout)
