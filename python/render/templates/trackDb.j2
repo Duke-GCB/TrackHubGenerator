@@ -1,13 +1,12 @@
 {% for t in tracks -%}
 track {{ t.track_name }}
-bigDataUrl {{ t.bigwig_url }}
+bigDataUrl {{ t.bigbed_url }}
 shortLabel {{ t.short_label }}
 longLabel {{ t.long_label }}
-type {{ t.type | default('bigWig') }}
-visibility {{ t.visibility | default('full') }}
+type {{ t.type | default('bigBed') }}
+visibility {{ t.visibility | default('pack') }}
 color {{ t.color | default('0,0,0') }}
 altColor {{ t.alt_color | default('0,100,200') }}
 priority {{ t.priority | default('20') }}
-viewLimits {{ t.view_limits | default('0:1') }}
 
 {% endfor %}
