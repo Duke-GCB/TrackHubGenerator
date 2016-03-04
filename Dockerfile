@@ -11,6 +11,7 @@ WORKDIR /usr/local/bin
 
 # Fetch tools from hgdownload and place in /usr/local/bin
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bedGraphToBigWig
+RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/bedToBigBed
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/fetchChromSizes
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/hubCheck
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/liftOver
