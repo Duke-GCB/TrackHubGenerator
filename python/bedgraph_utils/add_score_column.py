@@ -17,7 +17,7 @@ def add_column(input, output, source_index=BED_COL_NAME, factor=1000.0):
     reader = csv.reader(input, delimiter='\t')
     writer = csv.writer(output, delimiter='\t')
     for row in reader:
-        row.append(float(row[BED_COL_NAME]) * factor)
+        row.append(int(float(row[BED_COL_NAME]) * factor))
         writer.writerow(row)
 
 if __name__ == '__main__':
