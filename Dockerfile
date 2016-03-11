@@ -17,11 +17,6 @@ RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/hubCheck
 RUN curl -SLO http://hgdownload.cse.ucsc.edu/admin/exe/linux.x86_64/liftOver
 RUN chmod +x *
 
-# Add local code
-RUN mkdir -p /opt/TrackHubGenerator
-COPY . /opt/TrackHubGenerator
-WORKDIR /opt/TrackHubGenerator/python
-
 # Install python dependencies
 RUN apt-get install -y \
   python2.7 \
@@ -30,7 +25,13 @@ RUN apt-get install -y \
   build-essential \
   libyaml-dev
 
-RUN pip install -r requirements.txt
+# Install python requirements before rest of code, to avoid unnecessary cache invalidations
+RUN mkdir -p /opt/TrackHubGenerator
+COPY python/requirements.txt /opt/TrackHubGenerator/requirements.txt
+RUN pip install -r /opt/TrackHubGenerator/requirements.txt
+
+# Add local code
+COPY . /opt/TrackHubGenerator
 
 WORKDIR /opt/TrackHubGenerator/
 ENV PATH /opt/TrackHubGenerator:$PATH
