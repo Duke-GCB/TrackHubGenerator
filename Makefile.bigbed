@@ -31,7 +31,7 @@ $(TMPDIR)/%.sizes:
 $(HUBROOT)/hg19/$(FILE_PREFIX)-hg19_binding_site.bb: $(TMPDIR)/$(FILE_PREFIX)-hg19-combined.bed $(TMPDIR)/hg19.sizes
 	bedToBigBed $^ $@
 
-$(HUBROOT)/hg38/$(FILE_PREFIX)-hg19_binding_site.bb: $(TMPDIR)/$(FILE_PREFIX)-hg38-combined.bed $(TMPDIR)/hg38.sizes
+$(HUBROOT)/hg38/$(FILE_PREFIX)-hg38_binding_site.bb: $(TMPDIR)/$(FILE_PREFIX)-hg38-combined.bed $(TMPDIR)/hg38.sizes
 	bedToBigBed $^ $@
 
 ifndef HG19_BEDFILES
