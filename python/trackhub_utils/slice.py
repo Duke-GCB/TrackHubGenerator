@@ -1,4 +1,4 @@
-from bedgraph_utils import *
+from trackhub_utils import *
 import sys
 import fileinput
 import csv
