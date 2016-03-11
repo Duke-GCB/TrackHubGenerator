@@ -8,8 +8,7 @@ PYTHON=python
 
 all: tempdir hubroot bigbeds
 
-# TODO: add
-bigbeds: $(HUBROOT)/hg19/$(FILE_PREFIX)-hg19_binding_site.bb
+bigbeds: $(HUBROOT)/hg38/$(FILE_PREFIX)-hg38_binding_site.bb
 tempdir:
 	mkdir -p $(TMPDIR)
 
