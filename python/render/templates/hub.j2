@@ -1,6 +1,6 @@
 hub {{ hub.name }}
 shortLabel {{ hub.short_label }}
-longLabel {{ hub.long_label }}
+longLabel {{ hub.long_label.prefix }} {{ hub.long_label.tfs|join(', ')}}, {{ hub.long_label.suffix }}
 genomesFile {{ hub.genomes_file | default('genomes.txt') }}
 email {{ hub.email }}
 descriptionUrl {{ hub.description_url | default('http://www.genome.duke.edu') }}
