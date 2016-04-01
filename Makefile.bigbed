@@ -18,9 +18,9 @@ hubroot:
 
 # 1 - combine the per-chrom bed files in the data directory
 $(TMPDIR)/$(FILE_PREFIX)-hg19-combined.bed:
-	scripts/combine_bed.sh $(HG19_BEDFILES)/*.bed | scripts/sort_bed.sh | python python/trackhub_utils/add_score_and_rgb_columns.py > $@
+	scripts/combine_bed.sh $(HG19_BEDFILES)/*.bed | scripts/sort_bed.sh | python/trackhub_utils/add_score_column.py > $@
 $(TMPDIR)/$(FILE_PREFIX)-hg38-combined.bed:
-	scripts/combine_bed.sh $(HG38_BEDFILES)/*.bed | scripts/sort_bed.sh | python python/trackhub_utils/add_score_and_rgb_columns.py > $@
+	scripts/combine_bed.sh $(HG38_BEDFILES)/*.bed | scripts/sort_bed.sh | python/trackhub_utils/add_score_column.py > $@
 
 # 2 - Convert to bigBed
 # 2.1 chrom sizes
