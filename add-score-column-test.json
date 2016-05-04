@@ -1,0 +1,6 @@
+{
+  "input_file": {
+    "class" : "File",
+    "path" : "/Users/dcl9/Code/python/tf-dna-cwl/unsorted.sorted.bed"
+  }
+}
