@@ -14,12 +14,11 @@ inputs:
     type: string
     default: ''
     inputBinding:
-      valueFrom: $(inputs.input_file.path.replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '') + '.bb')
       position: 3
 outputs:
   - id: "#output_file"
     type: File
     outputBinding:
-        glob: $(inputs.input_file.path.replace(/^.*[\\\/]/, '').replace(/\.[^/.]+$/, '') + '.bb')
+        glob: $(inputs.output_file_name)
 
 baseCommand: bedToBigBed
