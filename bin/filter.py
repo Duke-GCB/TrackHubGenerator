@@ -15,8 +15,8 @@ def filter_scores(input, output, threshhold=0.0, source_index=3):
     :param source_index: Column index containing the source value
     :return:
     """
-    reader = csv.reader(input, delimiter=' ')
-    writer = csv.writer(output, delimiter=' ')
+    reader = csv.reader(input, delimiter='\t')
+    writer = csv.writer(output, delimiter='\t')
     for row in reader:
         # Adds a score column by multiplying the value of an existing column by a factor
         # http://genome.ucsc.edu/FAQ/FAQformat.html#format1
