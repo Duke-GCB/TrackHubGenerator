@@ -10,7 +10,7 @@ inputs:
     type: float
   - id: "#assembly"
     type: string
-  - id: "#intermediate_output_file"
+  - id: "#intermediate_output_file_name"
     type: string
     default: 'combined-intermediate.bed'
   - id: "#output_bigbed_file_name"
@@ -26,7 +26,7 @@ steps:
     run: { import: combine-bed.cwl }
     inputs:
     - { id: "#combine.input_files", source: "#input_files" }
-    - { id: "#combine.output_file_name", source: "#intermediate_output_file" }
+    - { id: "#combine.output_file_name", source: "#intermediate_output_file_name" }
     outputs:
     - { id: "#combine.output_file" }
   - id: "#filter"
