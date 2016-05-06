@@ -1,13 +1,32 @@
-HUBROOT=/trackhub
-DATA=/data
-all: hub bigbeds
+# Makefile for generating track hub directory
 
-hub:
-	$(MAKE) -f Makefile.hub HUBROOT=$(HUBROOT)
+HUBROOT=./hubroot
+YAMLROOT=./yaml
+PYTHON=python
 
-bigbeds:
-	$(MAKE) -f Makefile.bigbed HUBROOT=$(HUBROOT) HG19_BEDFILES=$(DATA)/hg19/central20bp/E2F1 HG38_BEDFILES=$(DATA)/hg38/central20bp/E2F1 FILE_PREFIX=E2F1
-	$(MAKE) -f Makefile.bigbed HUBROOT=$(HUBROOT) HG19_BEDFILES=$(DATA)/hg19/central20bp/E2F4 HG38_BEDFILES=$(DATA)/hg38/central20bp/E2F4 FILE_PREFIX=E2F4
+.PHONY: hubroot
+
+all: hubroot hub genomes tracks
+
+hubroot:
+	mkdir -p $(HUBROOT)
+	mkdir -p $(HUBROOT)/hg19
+	mkdir -p $(HUBROOT)/hg38
+
+hub: hubroot $(HUBROOT)/hub.txt
+genomes: hubroot $(HUBROOT)/genomes.txt
+tracks: hubroot $(HUBROOT)/hg19/trackDb.txt $(HUBROOT)/hg38/trackDb.txt
+
+# Writing explicit rules here since make < 3.81 can't figure out which to use
+
+$(HUBROOT)/hub.txt:
+	$(PYTHON) python/render/render.py $(YAMLROOT)/hub/hub.yaml hub > $@
+
+$(HUBROOT)/genomes.txt:
+	$(PYTHON) python/render/render.py $(YAMLROOT)/genomes/genomes.yaml genomes > $@
+
+$(HUBROOT)/%/trackDb.txt:
+	$(PYTHON) python/render/render_tracks.py --proteins E2F1 E2F4 --assembly $* --site_width 20bp > $@
 
 clean:
-	rm -rf $(HUBROOT)/*
+	rm -rf $(HUBROOT)
