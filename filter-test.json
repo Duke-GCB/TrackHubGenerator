@@ -1,0 +1,7 @@
+{
+  "input_file": {
+    "class" : "File",
+    "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F1/hg38-chr6-E2F1-central20bp-SVR-scores.bed"
+  },
+  "threshold": 0.207
+}

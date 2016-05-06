@@ -1,0 +1,33 @@
+{
+  "input_files": [
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr1-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr10-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr11-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr12-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr13-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr14-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr15-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr16-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr17-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr18-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr19-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr2-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr20-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr21-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr22-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr3-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr4-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr5-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr6-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr7-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr8-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chr9-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chrX-E2F4-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chrY-E2F4-central20bp-SVR-scores.bed"}
+  ],
+  "filter_threshold" : 0.207,
+  "resize_width" : 36,
+  "assembly" : "hg38",
+  "intermediate_output_file_name" : "hg38-chr11-E2F4-central20bp-SVR-scores",
+  "output_bigbed_file_name" : "hg38-E2F4-0001.bb"
+}

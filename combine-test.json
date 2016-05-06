@@ -1,0 +1,8 @@
+{
+  "input_files": [
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F1/hg38-chr4-E2F1-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F1/hg38-chr5-E2F1-central20bp-SVR-scores.bed"},
+    {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F1/hg38-chr6-E2F1-central20bp-SVR-scores.bed"}
+  ],
+  "output_file_name" : "hg38-chr4-6-E2F1-central20bp-SVR-scores.bed"
+}
