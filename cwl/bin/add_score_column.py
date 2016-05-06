@@ -21,7 +21,7 @@ def add_score_column(input, output, source_index=COL_VALUE, factor=1000.0):
     for row in reader:
         # Adds a score column by multiplying the value of an existing column by a factor
         # http://genome.ucsc.edu/FAQ/FAQformat.html#format1
-        row.append(int(float(row[source_index]) * factor))
+        row.append(int(min(float(row[source_index]) * factor, factor)))
         writer.writerow(row)
 
 if __name__ == '__main__':
