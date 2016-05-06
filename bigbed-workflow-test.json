@@ -26,6 +26,7 @@
     {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/central20bp/E2F4/hg38-chrY-E2F4-central20bp-SVR-scores.bed"}
   ],
   "filter_threshold" : 0.207,
+  "resize_width" : 36,
   "assembly" : "hg38",
   "intermediate_output_file_name" : "hg38-chr11-E2F4-central20bp-SVR-scores",
   "output_bigbed_file_name" : "hg38-E2F4-0001.bb"

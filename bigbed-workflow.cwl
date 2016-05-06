@@ -8,6 +8,8 @@ inputs:
       items: File
   - id: "#filter_threshold"
     type: float
+  - id: "#resize_width"
+    type: int
   - id: "#assembly"
     type: string
   - id: "#intermediate_output_file_name"
@@ -36,10 +38,17 @@ steps:
     - { id: "#filter.threshold", source: "#filter_threshold" }
     outputs:
     - { id: "#filter.output_file" }
+  - id: "#resize"
+    run: { import: resize-bed.cwl }
+    inputs:
+    - { id: "#resize.input_file", source: "#filter.output_file" }
+    - { id: "#resize.width", source: "#resize_width" }
+    outputs:
+    - { id: "#resize.output_file" }
   - id: "#sort"
     run: { import: sort-bed.cwl }
     inputs:
-    - { id: "#sort.input_file", source: "#filter.output_file" }
+    - { id: "#sort.input_file", source: "#resize.output_file" }
     outputs:
     - { id: "#sort.output_file" }
   - id: "#add_score_column"
