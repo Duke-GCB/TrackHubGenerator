@@ -26,7 +26,7 @@ $(HUBROOT)/genomes.txt:
 	$(PYTHON) python/render/render.py $(YAMLROOT)/genomes/genomes.yaml genomes > $@
 
 $(HUBROOT)/%/trackDb.txt:
-	$(PYTHON) python/render/render_tracks.py --proteins E2F1 E2F4 --assembly $* --site_width 20bp > $@
+	$(PYTHON) python/render/render_js_tracks.py --proteins E2F1 E2F4 --assembly $* --site_width 20bp > $@
 
 clean:
 	rm -rf $(HUBROOT)
