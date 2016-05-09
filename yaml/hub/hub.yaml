@@ -6,5 +6,9 @@ hub:
     tfs:
       - E2F1
       - E2F4
+      - ELK1
+      - ETS1
+      - Myc
+      - Mad
     suffix: according to SVR models trained on gcPBM data
   email: gcb-contact@duke.edu
