@@ -30,8 +30,8 @@ $(HUBROOT)/%/trackDb.txt:
 	$(PYTHON) python/render/render_tracks.py --assembly $* $(YAMLROOT)/tracks/tracks.yaml > $@
 
 bigbeds:
-	cp $(BIGBEDS)/*hg19*.bb $(HUBROOT)/hg19
-	cp $(BIGBEDS)/*hg38*.bb $(HUBROOT)/hg38
+	cp $(DATA)/*hg19*.bb $(HUBROOT)/hg19
+	cp $(DATA)/*hg38*.bb $(HUBROOT)/hg38
 
 clean:
 	rm -rf $(HUBROOT)
