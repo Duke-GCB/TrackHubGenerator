@@ -1,0 +1,600 @@
+- assembly: hg19
+  author_identifier: JS
+  cores:
+  - CCGC
+  - GCGC
+  - GCGG
+  filter_threshold: 0.207
+  kmers:
+  - 3
+  model_filename: E2F1-bestSVR.model
+  protein: E2F1
+  serial_number: '0001'
+  slope_intercept: true
+  track_filename: E2F1-hg19_binding_site.bb
+  width: 36
+- assembly: hg19
+  author_identifier: JS
+  cores:
+  - CCGC
+  - GCGC
+  - GCGG
+  filter_threshold: 0.207
+  kmers:
+  - 3
+  model_filename: E2F4-bestSVR.model
+  protein: E2F4
+  serial_number: '0002'
+  slope_intercept: true
+  track_filename: E2F4-hg19_binding_site.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GCGC
+  filter_threshold: 0.1933
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: E2F1_250nM_Bound_filtered_normalized_34bp_GCGC_1a2a3mer_format.model
+  protein: E2F1
+  serial_number: '0003'
+  slope_intercept: false
+  track_filename: hg19-0003-E2F1-E2F1_250nM_Bound_filtered_normalized_34bp_GCGC_1a2a3mer_format.model.bb
+  width: '34'
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GCGG
+  filter_threshold: 0.1933
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: E2F1_250nM_Bound_filtered_normalized_34bp_GCGG_1a2a3mer_format.model
+  protein: E2F1
+  serial_number: '0004'
+  slope_intercept: false
+  track_filename: hg19-0004-E2F1-E2F1_250nM_Bound_filtered_normalized_34bp_GCGG_1a2a3mer_format.model.bb
+  width: '34'
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GCGC
+  filter_threshold: 0.162
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: E2F4_500nM_Bound_filtered_normalized_34bp_GCGC_1a2a3mer_format.model
+  protein: E2F4
+  serial_number: '0005'
+  slope_intercept: false
+  track_filename: hg19-0005-E2F4-E2F4_500nM_Bound_filtered_normalized_34bp_GCGC_1a2a3mer_format.model.bb
+  width: '34'
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GCGG
+  filter_threshold: 0.162
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: E2F4_500nM_Bound_filtered_normalized_34bp_GCGG_1a2a3mer_format.model
+  protein: E2F4
+  serial_number: '0006'
+  slope_intercept: false
+  track_filename: hg19-0006-E2F4-E2F4_500nM_Bound_filtered_normalized_34bp_GCGG_1a2a3mer_format.model.bb
+  width: '34'
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GGAA
+  filter_threshold: 0.2244
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: ELK1_100nM_Bound_filtered_normalized_GGAA_1a2a3mer_format.model
+  protein: ELK1
+  serial_number: '0007'
+  slope_intercept: false
+  track_filename: hg19-0007-ELK1-ELK1_100nM_Bound_filtered_normalized_GGAA_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GGAT
+  filter_threshold: 0.2244
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: ELK1_100nM_Bound_filtered_normalized_GGAT_1a2a3mer_format.model
+  protein: ELK1
+  serial_number: 0008
+  slope_intercept: false
+  track_filename: hg19-0008-ELK1-ELK1_100nM_Bound_filtered_normalized_GGAT_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GGAA
+  filter_threshold: 0.2128
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: ETS1_100nM_Bound_filtered_normalized_GGAA_1a2a3mer_format.model
+  protein: ETS1
+  serial_number: 0009
+  slope_intercept: false
+  track_filename: hg19-0009-ETS1-ETS1_100nM_Bound_filtered_normalized_GGAA_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GGAT
+  filter_threshold: 0.2128
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: ETS1_100nM_Bound_filtered_normalized_GGAT_1a2a3mer_format.model
+  protein: ETS1
+  serial_number: '0010'
+  slope_intercept: false
+  track_filename: hg19-0010-ETS1-ETS1_100nM_Bound_filtered_normalized_GGAT_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CACATG
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMadMax_Bound_filtered_normalized_CACATG_1a2a3mer_format.model
+  protein: HisMadMax
+  serial_number: '0011'
+  slope_intercept: false
+  track_filename: hg19-0011-HisMadMax-HisMadMax_Bound_filtered_normalized_CACATG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CACGAG
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMadMax_Bound_filtered_normalized_CACGAG_1a2a3mer_format.model
+  protein: HisMadMax
+  serial_number: '0012'
+  slope_intercept: false
+  track_filename: hg19-0012-HisMadMax-HisMadMax_Bound_filtered_normalized_CACGAG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CACGCG
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMadMax_Bound_filtered_normalized_CACGCG_1a2a3mer_format.model
+  protein: HisMadMax
+  serial_number: '0013'
+  slope_intercept: false
+  track_filename: hg19-0013-HisMadMax-HisMadMax_Bound_filtered_normalized_CACGCG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CACGTG
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMadMax_Bound_filtered_normalized_CACGTG_1a2a3mer_format.model
+  protein: HisMadMax
+  serial_number: '0014'
+  slope_intercept: false
+  track_filename: hg19-0014-HisMadMax-HisMadMax_Bound_filtered_normalized_CACGTG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CATGCG
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMadMax_Bound_filtered_normalized_CATGCG_1a2a3mer_format.model
+  protein: HisMadMax
+  serial_number: '0015'
+  slope_intercept: false
+  track_filename: hg19-0015-HisMadMax-HisMadMax_Bound_filtered_normalized_CATGCG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CACATG
+  filter_threshold: 0.1619
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMycMax_Bound_filtered_normalized_CACATG_1a2a3mer_format.model
+  protein: HisMycMax
+  serial_number: '0016'
+  slope_intercept: false
+  track_filename: hg19-0016-HisMycMax-HisMycMax_Bound_filtered_normalized_CACATG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CACGAG
+  filter_threshold: 0.1619
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMycMax_Bound_filtered_normalized_CACGAG_1a2a3mer_format.model
+  protein: HisMycMax
+  serial_number: '0017'
+  slope_intercept: false
+  track_filename: hg19-0017-HisMycMax-HisMycMax_Bound_filtered_normalized_CACGAG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CACGCG
+  filter_threshold: 0.1619
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMycMax_Bound_filtered_normalized_CACGCG_1a2a3mer_format.model
+  protein: HisMycMax
+  serial_number: 0018
+  slope_intercept: false
+  track_filename: hg19-0018-HisMycMax-HisMycMax_Bound_filtered_normalized_CACGCG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CACGTG
+  filter_threshold: 0.1619
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMycMax_Bound_filtered_normalized_CACGTG_1a2a3mer_format.model
+  protein: HisMycMax
+  serial_number: 0019
+  slope_intercept: false
+  track_filename: hg19-0019-HisMycMax-HisMycMax_Bound_filtered_normalized_CACGTG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CATGCG
+  filter_threshold: 0.1619
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMycMax_Bound_filtered_normalized_CATGCG_1a2a3mer_format.model
+  protein: HisMycMax
+  serial_number: '0020'
+  slope_intercept: false
+  track_filename: hg19-0020-HisMycMax-HisMycMax_Bound_filtered_normalized_CATGCG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: JS
+  cores:
+  - CCGC
+  - GCGC
+  - GCGG
+  filter_threshold: 0.207
+  kmers:
+  - 3
+  model_filename: E2F1-bestSVR.model
+  protein: E2F1
+  serial_number: '0001'
+  slope_intercept: true
+  track_filename: E2F1-hg38_binding_site.bb
+  width: 36
+- assembly: hg38
+  author_identifier: JS
+  cores:
+  - CCGC
+  - GCGC
+  - GCGG
+  filter_threshold: 0.207
+  kmers:
+  - 3
+  model_filename: E2F4-bestSVR.model
+  protein: E2F4
+  serial_number: '0002'
+  slope_intercept: true
+  track_filename: E2F4-hg38_binding_site.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GCGC
+  filter_threshold: 0.1933
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: E2F1_250nM_Bound_filtered_normalized_34bp_GCGC_1a2a3mer_format.model
+  protein: E2F1
+  serial_number: '0003'
+  slope_intercept: false
+  track_filename: hg38-0003-E2F1-E2F1_250nM_Bound_filtered_normalized_34bp_GCGC_1a2a3mer_format.model.bb
+  width: '34'
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GCGG
+  filter_threshold: 0.1933
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: E2F1_250nM_Bound_filtered_normalized_34bp_GCGG_1a2a3mer_format.model
+  protein: E2F1
+  serial_number: '0004'
+  slope_intercept: false
+  track_filename: hg38-0004-E2F1-E2F1_250nM_Bound_filtered_normalized_34bp_GCGG_1a2a3mer_format.model.bb
+  width: '34'
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GCGC
+  filter_threshold: 0.162
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: E2F4_500nM_Bound_filtered_normalized_34bp_GCGC_1a2a3mer_format.model
+  protein: E2F4
+  serial_number: '0005'
+  slope_intercept: false
+  track_filename: hg38-0005-E2F4-E2F4_500nM_Bound_filtered_normalized_34bp_GCGC_1a2a3mer_format.model.bb
+  width: '34'
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GCGG
+  filter_threshold: 0.162
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: E2F4_500nM_Bound_filtered_normalized_34bp_GCGG_1a2a3mer_format.model
+  protein: E2F4
+  serial_number: '0006'
+  slope_intercept: false
+  track_filename: hg38-0006-E2F4-E2F4_500nM_Bound_filtered_normalized_34bp_GCGG_1a2a3mer_format.model.bb
+  width: '34'
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GGAA
+  filter_threshold: 0.2244
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: ELK1_100nM_Bound_filtered_normalized_GGAA_1a2a3mer_format.model
+  protein: ELK1
+  serial_number: '0007'
+  slope_intercept: false
+  track_filename: hg38-0007-ELK1-ELK1_100nM_Bound_filtered_normalized_GGAA_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GGAT
+  filter_threshold: 0.2244
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: ELK1_100nM_Bound_filtered_normalized_GGAT_1a2a3mer_format.model
+  protein: ELK1
+  serial_number: 0008
+  slope_intercept: false
+  track_filename: hg38-0008-ELK1-ELK1_100nM_Bound_filtered_normalized_GGAT_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GGAA
+  filter_threshold: 0.2128
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: ETS1_100nM_Bound_filtered_normalized_GGAA_1a2a3mer_format.model
+  protein: ETS1
+  serial_number: 0009
+  slope_intercept: false
+  track_filename: hg38-0009-ETS1-ETS1_100nM_Bound_filtered_normalized_GGAA_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GGAT
+  filter_threshold: 0.2128
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: ETS1_100nM_Bound_filtered_normalized_GGAT_1a2a3mer_format.model
+  protein: ETS1
+  serial_number: '0010'
+  slope_intercept: false
+  track_filename: hg38-0010-ETS1-ETS1_100nM_Bound_filtered_normalized_GGAT_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CACATG
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMadMax_Bound_filtered_normalized_CACATG_1a2a3mer_format.model
+  protein: HisMadMax
+  serial_number: '0011'
+  slope_intercept: false
+  track_filename: hg38-0011-HisMadMax-HisMadMax_Bound_filtered_normalized_CACATG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CACGAG
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMadMax_Bound_filtered_normalized_CACGAG_1a2a3mer_format.model
+  protein: HisMadMax
+  serial_number: '0012'
+  slope_intercept: false
+  track_filename: hg38-0012-HisMadMax-HisMadMax_Bound_filtered_normalized_CACGAG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CACGCG
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMadMax_Bound_filtered_normalized_CACGCG_1a2a3mer_format.model
+  protein: HisMadMax
+  serial_number: '0013'
+  slope_intercept: false
+  track_filename: hg38-0013-HisMadMax-HisMadMax_Bound_filtered_normalized_CACGCG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CACGTG
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMadMax_Bound_filtered_normalized_CACGTG_1a2a3mer_format.model
+  protein: HisMadMax
+  serial_number: '0014'
+  slope_intercept: false
+  track_filename: hg38-0014-HisMadMax-HisMadMax_Bound_filtered_normalized_CACGTG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CATGCG
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMadMax_Bound_filtered_normalized_CATGCG_1a2a3mer_format.model
+  protein: HisMadMax
+  serial_number: '0015'
+  slope_intercept: false
+  track_filename: hg38-0015-HisMadMax-HisMadMax_Bound_filtered_normalized_CATGCG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CACATG
+  filter_threshold: 0.1619
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMycMax_Bound_filtered_normalized_CACATG_1a2a3mer_format.model
+  protein: HisMycMax
+  serial_number: '0016'
+  slope_intercept: false
+  track_filename: hg38-0016-HisMycMax-HisMycMax_Bound_filtered_normalized_CACATG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CACGAG
+  filter_threshold: 0.1619
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMycMax_Bound_filtered_normalized_CACGAG_1a2a3mer_format.model
+  protein: HisMycMax
+  serial_number: '0017'
+  slope_intercept: false
+  track_filename: hg38-0017-HisMycMax-HisMycMax_Bound_filtered_normalized_CACGAG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CACGCG
+  filter_threshold: 0.1619
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMycMax_Bound_filtered_normalized_CACGCG_1a2a3mer_format.model
+  protein: HisMycMax
+  serial_number: 0018
+  slope_intercept: false
+  track_filename: hg38-0018-HisMycMax-HisMycMax_Bound_filtered_normalized_CACGCG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CACGTG
+  filter_threshold: 0.1619
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMycMax_Bound_filtered_normalized_CACGTG_1a2a3mer_format.model
+  protein: HisMycMax
+  serial_number: 0019
+  slope_intercept: false
+  track_filename: hg38-0019-HisMycMax-HisMycMax_Bound_filtered_normalized_CACGTG_1a2a3mer_format.model.bb
+  width: 36
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CATGCG
+  filter_threshold: 0.1619
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filename: HisMycMax_Bound_filtered_normalized_CATGCG_1a2a3mer_format.model
+  protein: HisMycMax
+  serial_number: '0020'
+  slope_intercept: false
+  track_filename: hg38-0020-HisMycMax-HisMycMax_Bound_filtered_normalized_CATGCG_1a2a3mer_format.model.bb
+  width: 36

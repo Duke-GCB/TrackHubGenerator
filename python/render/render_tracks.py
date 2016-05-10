@@ -1,32 +1,31 @@
 __author__ = 'dcl9'
-from jinja2 import Environment, PackageLoader
 from render import render_template
 import argparse
 import yaml
 
-def generate_track_dict(protein, assembly, site_width):
-    env = Environment(loader=PackageLoader(package_name='render'))
-    template = env.get_template('tracks.yaml.j2')
-    vals = { 'protein' : protein, 'assembly': assembly, 'site_width' : site_width}
-    yaml_str = template.render(vals)
-    return yaml.load(yaml_str)
 
+def generate_track_dict(metadata):
+    d = dict()
+    d['track_name'] = '{}_{}({})'.format(metadata['protein'], metadata['serial_number'], metadata['author_identifier'])
+    d['bigbed_url'] = metadata['track_filename']
+    d['short_label'] = '{}_{} binding sites'.format(metadata['protein'], metadata['serial_number'])
+    d['long_label'] = 'Predicted {} binding sites (site width = {}, model identifier {}({})'.format(metadata['protein'], metadata['width'], metadata['serial_number'], metadata['author_identifier'])
+    return d
 
-def render_track_variants(proteins, assembly, site_width):
-    tracks = []
-    for protein in proteins:
-        tracks = tracks + generate_track_dict(protein, assembly, site_width)
+def render_tracks(assembly, metadata_file):
+    obj = yaml.load(metadata_file)
+    # Just pull out the assembly ones
+    tracks = [generate_track_dict(x) for x in obj if x['assembly'] == assembly]
     trackdb = {'tracks': tracks}
     render_template(trackdb, 'trackDb')
 
 
 def main():
     parser = argparse.ArgumentParser(description='Render trackDb.txt')
-    parser.add_argument('--proteins', nargs='+')
     parser.add_argument('--assembly')
-    parser.add_argument('--site_width')
+    parser.add_argument('metadata_file', type=argparse.FileType('r'))
     args = parser.parse_args()
-    render_track_variants(args.proteins, args.assembly, args.site_width)
+    render_tracks(args.assembly, args.metadata_file)
 
 
 if __name__ == '__main__':
