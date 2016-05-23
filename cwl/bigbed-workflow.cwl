@@ -51,10 +51,16 @@ steps:
     - { id: "#sort.input_file", source: "#resize.output_file" }
     outputs:
     - { id: "#sort.output_file" }
+  - id: "change_precision"
+    run: { import: change-precision.cwl }
+    inputs:
+    - { id: "#change_precision.input_file", source: "#sort.output_file" }
+    outputs:
+    - { id: "#change_precision.output_file" }
   - id: "#add_score_column"
     run: { import: add-score-column.cwl }
     inputs:
-    - { id: "#add_score_column.input_file", source: "#sort.output_file" }
+    - { id: "#add_score_column.input_file", source: "#change_precision.output_file" }
     outputs:
     - { id: "#add_score_column.output_file" }
   - id: "#fetch_chrom_sizes"
