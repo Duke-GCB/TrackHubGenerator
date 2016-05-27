@@ -9,7 +9,7 @@ def generate_track_dict(metadata):
     d['track_name'] = '{}_{}({})'.format(metadata['protein'], metadata['serial_number'], metadata['author_identifier'])
     d['bigbed_url'] = metadata['track_filename']
     d['short_label'] = '{}_{} binding sites'.format(metadata['protein'], metadata['serial_number'])
-    d['long_label'] = 'Predicted {} binding sites (site width = {}, model identifier {}({})'.format(metadata['protein'], metadata['width'], metadata['serial_number'], metadata['author_identifier'])
+    d['long_label'] = 'Predicted {} binding sites (site width = {}, model identifier {}({}))'.format(metadata['protein'], metadata['width'], metadata['serial_number'], metadata['author_identifier'])
     return d
 
 def render_tracks(assembly, metadata_file):
