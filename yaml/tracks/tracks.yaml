@@ -13,6 +13,7 @@
   serial_number: '0001'
   slope_intercept: true
   track_filename: hg19-0001-E2F1-E2F1-bestSVR.model.bb
+  track_name: E2F1_0001(JS)
   width: 36
 - assembly: hg19
   author_identifier: JS
@@ -29,6 +30,7 @@
   serial_number: '0002'
   slope_intercept: true
   track_filename: hg19-0002-E2F4-E2F4-bestSVR.model.bb
+  track_name: E2F4_0002(JS)
   width: 36
 - assembly: hg19
   author_identifier: NS
@@ -47,6 +49,7 @@
   serial_number: '0003'
   slope_intercept: false
   track_filename: hg19-0003-E2F1.bb
+  track_name: E2F1_0003(NS)
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -65,6 +68,7 @@
   serial_number: '0004'
   slope_intercept: false
   track_filename: hg19-0004-E2F4.bb
+  track_name: E2F4_0004(NS)
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -83,6 +87,7 @@
   serial_number: '0005'
   slope_intercept: false
   track_filename: hg19-0005-ELK1.bb
+  track_name: ELK1_0005(NS)
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -101,6 +106,7 @@
   serial_number: '0006'
   slope_intercept: false
   track_filename: hg19-0006-ETS1.bb
+  track_name: ETS1_0006(NS)
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -125,6 +131,7 @@
   serial_number: '0007'
   slope_intercept: false
   track_filename: hg19-0007-HisMadMax.bb
+  track_name: HisMadMax_0007(NS)
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -149,6 +156,70 @@
   serial_number: 0008
   slope_intercept: false
   track_filename: hg19-0008-HisMycMax.bb
+  track_name: HisMycMax_0008(NS)
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GCGC
+  - GCGG
+  filter_threshold: 0.2762
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
+  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
+  protein: E2F3
+  serial_number: 0009
+  slope_intercept: false
+  track_filename: hg19-0009-E2F3.bb
+  track_name: E2F3_0009(NS)
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GGAA
+  - GGAT
+  filter_threshold: 0.2888
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
+  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
+  protein: GABPA
+  serial_number: '0010'
+  slope_intercept: false
+  track_filename: hg19-0010-GABPA.bb
+  track_name: GABPA_0010(NS)
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - CACATG
+  - CACGAG
+  - CACGCG
+  - CACGTG
+  - CATGCG
+  filter_threshold: 0.2386
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACATG_1a2a3mer_format.model
+  - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACGAG_1a2a3mer_format.model
+  - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACGCG_1a2a3mer_format.model
+  - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACGTG_1a2a3mer_format.model
+  - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CATGCG_1a2a3mer_format.model
+  protein: HisMax
+  serial_number: '0011'
+  slope_intercept: false
+  track_filename: hg19-0011-HisMax.bb
+  track_name: HisMax_0011(NS)
   width: 20
 - assembly: hg38
   author_identifier: JS
@@ -165,6 +236,7 @@
   serial_number: '0001'
   slope_intercept: true
   track_filename: hg38-0001-E2F1-E2F1-bestSVR.model.bb
+  track_name: E2F1_0001(JS)
   width: 36
 - assembly: hg38
   author_identifier: JS
@@ -181,6 +253,7 @@
   serial_number: '0002'
   slope_intercept: true
   track_filename: hg38-0002-E2F4-E2F4-bestSVR.model.bb
+  track_name: E2F4_0002(JS)
   width: 36
 - assembly: hg38
   author_identifier: NS
@@ -199,6 +272,7 @@
   serial_number: '0003'
   slope_intercept: false
   track_filename: hg38-0003-E2F1.bb
+  track_name: E2F1_0003(NS)
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -217,6 +291,7 @@
   serial_number: '0004'
   slope_intercept: false
   track_filename: hg38-0004-E2F4.bb
+  track_name: E2F4_0004(NS)
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -235,6 +310,7 @@
   serial_number: '0005'
   slope_intercept: false
   track_filename: hg38-0005-ELK1.bb
+  track_name: ELK1_0005(NS)
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -253,6 +329,7 @@
   serial_number: '0006'
   slope_intercept: false
   track_filename: hg38-0006-ETS1.bb
+  track_name: ETS1_0006(NS)
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -277,6 +354,7 @@
   serial_number: '0007'
   slope_intercept: false
   track_filename: hg38-0007-HisMadMax.bb
+  track_name: HisMadMax_0007(NS)
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -301,4 +379,68 @@
   serial_number: 0008
   slope_intercept: false
   track_filename: hg38-0008-HisMycMax.bb
+  track_name: HisMycMax_0008(NS)
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GCGC
+  - GCGG
+  filter_threshold: 0.2762
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
+  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
+  protein: E2F3
+  serial_number: 0009
+  slope_intercept: false
+  track_filename: hg38-0009-E2F3.bb
+  track_name: E2F3_0009(NS)
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GGAA
+  - GGAT
+  filter_threshold: 0.2888
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
+  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
+  protein: GABPA
+  serial_number: '0010'
+  slope_intercept: false
+  track_filename: hg38-0010-GABPA.bb
+  track_name: GABPA_0010(NS)
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - CACATG
+  - CACGAG
+  - CACGCG
+  - CACGTG
+  - CATGCG
+  filter_threshold: 0.2386
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACATG_1a2a3mer_format.model
+  - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACGAG_1a2a3mer_format.model
+  - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACGCG_1a2a3mer_format.model
+  - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACGTG_1a2a3mer_format.model
+  - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CATGCG_1a2a3mer_format.model
+  protein: HisMax
+  serial_number: '0011'
+  slope_intercept: false
+  track_filename: hg38-0011-HisMax.bb
+  track_name: HisMax_0011(NS)
   width: 20
