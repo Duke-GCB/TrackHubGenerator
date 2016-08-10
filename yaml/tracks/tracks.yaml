@@ -14,6 +14,7 @@
   slope_intercept: true
   track_filename: hg19-0001-E2F1-E2F1-bestSVR.model.bb
   track_name: E2F1_0001(JS)
+  transform: false
   width: 36
 - assembly: hg19
   author_identifier: JS
@@ -31,6 +32,7 @@
   slope_intercept: true
   track_filename: hg19-0002-E2F4-E2F4-bestSVR.model.bb
   track_name: E2F4_0002(JS)
+  transform: false
   width: 36
 - assembly: hg19
   author_identifier: NS
@@ -50,6 +52,7 @@
   slope_intercept: false
   track_filename: hg19-0003-E2F1.bb
   track_name: E2F1_0003(NS)
+  transform: true
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -69,6 +72,7 @@
   slope_intercept: false
   track_filename: hg19-0004-E2F4.bb
   track_name: E2F4_0004(NS)
+  transform: true
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -88,6 +92,7 @@
   slope_intercept: false
   track_filename: hg19-0005-ELK1.bb
   track_name: ELK1_0005(NS)
+  transform: true
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -107,6 +112,7 @@
   slope_intercept: false
   track_filename: hg19-0006-ETS1.bb
   track_name: ETS1_0006(NS)
+  transform: true
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -132,6 +138,7 @@
   slope_intercept: false
   track_filename: hg19-0007-HisMadMax.bb
   track_name: HisMadMax_0007(NS)
+  transform: true
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -157,6 +164,7 @@
   slope_intercept: false
   track_filename: hg19-0008-HisMycMax.bb
   track_name: HisMycMax_0008(NS)
+  transform: true
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -176,6 +184,7 @@
   slope_intercept: false
   track_filename: hg19-0009-E2F3.bb
   track_name: E2F3_0009(NS)
+  transform: true
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -195,6 +204,7 @@
   slope_intercept: false
   track_filename: hg19-0010-GABPA.bb
   track_name: GABPA_0010(NS)
+  transform: true
   width: 20
 - assembly: hg19
   author_identifier: NS
@@ -220,6 +230,7 @@
   slope_intercept: false
   track_filename: hg19-0011-HisMax.bb
   track_name: HisMax_0011(NS)
+  transform: true
   width: 20
 - assembly: hg38
   author_identifier: JS
@@ -237,6 +248,7 @@
   slope_intercept: true
   track_filename: hg38-0001-E2F1-E2F1-bestSVR.model.bb
   track_name: E2F1_0001(JS)
+  transform: false
   width: 36
 - assembly: hg38
   author_identifier: JS
@@ -254,6 +266,7 @@
   slope_intercept: true
   track_filename: hg38-0002-E2F4-E2F4-bestSVR.model.bb
   track_name: E2F4_0002(JS)
+  transform: false
   width: 36
 - assembly: hg38
   author_identifier: NS
@@ -273,6 +286,7 @@
   slope_intercept: false
   track_filename: hg38-0003-E2F1.bb
   track_name: E2F1_0003(NS)
+  transform: true
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -292,6 +306,7 @@
   slope_intercept: false
   track_filename: hg38-0004-E2F4.bb
   track_name: E2F4_0004(NS)
+  transform: true
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -311,6 +326,7 @@
   slope_intercept: false
   track_filename: hg38-0005-ELK1.bb
   track_name: ELK1_0005(NS)
+  transform: true
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -330,6 +346,7 @@
   slope_intercept: false
   track_filename: hg38-0006-ETS1.bb
   track_name: ETS1_0006(NS)
+  transform: true
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -355,6 +372,7 @@
   slope_intercept: false
   track_filename: hg38-0007-HisMadMax.bb
   track_name: HisMadMax_0007(NS)
+  transform: true
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -380,6 +398,7 @@
   slope_intercept: false
   track_filename: hg38-0008-HisMycMax.bb
   track_name: HisMycMax_0008(NS)
+  transform: true
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -399,6 +418,7 @@
   slope_intercept: false
   track_filename: hg38-0009-E2F3.bb
   track_name: E2F3_0009(NS)
+  transform: true
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -418,6 +438,7 @@
   slope_intercept: false
   track_filename: hg38-0010-GABPA.bb
   track_name: GABPA_0010(NS)
+  transform: true
   width: 20
 - assembly: hg38
   author_identifier: NS
@@ -443,4 +464,5 @@
   slope_intercept: false
   track_filename: hg38-0011-HisMax.bb
   track_name: HisMax_0011(NS)
+  transform: true
   width: 20
