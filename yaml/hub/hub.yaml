@@ -5,9 +5,11 @@ hub:
     prefix: Predictions of in vitro TF-DNA binding levels on
     tfs:
       - E2F1
+      - E2F3
       - E2F4
       - ELK1
       - ETS1
+      - GABPA
       - Myc
       - Mad
     suffix: according to SVR models trained on gcPBM data
