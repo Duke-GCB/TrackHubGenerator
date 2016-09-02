@@ -232,6 +232,66 @@
   track_name: HisMax_0011(NS)
   transform: true
   width: 20
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GAGGT
+  - GCGGC
+  - GCGGG
+  - GCGGT
+  - GTGGC
+  - GTGGG
+  - GTGGT
+  filter_threshold: 0.3061
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GAGGT_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGC_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGG_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGT_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGC_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGG_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGT_1a2a3mer_format.model
+  protein: Runx1
+  serial_number: '0012'
+  slope_intercept: false
+  track_filename: hg19-0012-Runx1.bb
+  track_name: Runx1_0012(NS)
+  transform: true
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  cores:
+  - GAGGT
+  - GCGGC
+  - GCGGG
+  - GCGGT
+  - GTGGC
+  - GTGGG
+  - GTGGT
+  filter_threshold: 0.2711
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GAGGT_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGC_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGG_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGT_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGC_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGG_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGT_1a2a3mer_format.model
+  protein: Runx2
+  serial_number: '0013'
+  slope_intercept: false
+  track_filename: hg19-0013-Runx2.bb
+  track_name: Runx2_0013(NS)
+  transform: true
+  width: 20
 - assembly: hg38
   author_identifier: JS
   cores:
@@ -464,5 +524,65 @@
   slope_intercept: false
   track_filename: hg38-0011-HisMax.bb
   track_name: HisMax_0011(NS)
+  transform: true
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GAGGT
+  - GCGGC
+  - GCGGG
+  - GCGGT
+  - GTGGC
+  - GTGGG
+  - GTGGT
+  filter_threshold: 0.3061
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GAGGT_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGC_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGG_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGT_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGC_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGG_1a2a3mer_format.model
+  - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGT_1a2a3mer_format.model
+  protein: Runx1
+  serial_number: '0012'
+  slope_intercept: false
+  track_filename: hg38-0012-Runx1.bb
+  track_name: Runx1_0012(NS)
+  transform: true
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  cores:
+  - GAGGT
+  - GCGGC
+  - GCGGG
+  - GCGGT
+  - GTGGC
+  - GTGGG
+  - GTGGT
+  filter_threshold: 0.2711
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GAGGT_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGC_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGG_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGGT_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGC_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGG_1a2a3mer_format.model
+  - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGT_1a2a3mer_format.model
+  protein: Runx2
+  serial_number: '0013'
+  slope_intercept: false
+  track_filename: hg38-0013-Runx2.bb
+  track_name: Runx2_0013(NS)
   transform: true
   width: 20
