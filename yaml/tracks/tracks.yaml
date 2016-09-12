@@ -1,126 +1,4 @@
 - assembly: hg19
-  author_identifier: JS
-  core_start: null
-  cores:
-  - CCGC
-  - GCGC
-  - GCGG
-  filter_threshold: 0.207
-  kmers:
-  - 3
-  model_filenames:
-  - E2F1-bestSVR.model
-  protein: E2F1
-  serial_number: '0001'
-  slope_intercept: true
-  track_filename: hg19-0001-E2F1-E2F1-bestSVR.model.bb
-  track_name: E2F1_0001(JS)
-  transform: false
-  width: 36
-- assembly: hg19
-  author_identifier: JS
-  core_start: null
-  cores:
-  - CCGC
-  - GCGC
-  - GCGG
-  filter_threshold: 0.207
-  kmers:
-  - 3
-  model_filenames:
-  - E2F4-bestSVR.model
-  protein: E2F4
-  serial_number: '0002'
-  slope_intercept: true
-  track_filename: hg19-0002-E2F4-E2F4-bestSVR.model.bb
-  track_name: E2F4_0002(JS)
-  transform: false
-  width: 36
-- assembly: hg19
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GCGC
-  - GCGG
-  filter_threshold: 0.1933
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
-  - E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
-  protein: E2F1
-  serial_number: '0003'
-  slope_intercept: false
-  track_filename: hg19-0003-E2F1.bb
-  track_name: E2F1_0003(NS)
-  transform: true
-  width: 20
-- assembly: hg19
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GCGC
-  - GCGG
-  filter_threshold: 0.162
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
-  - E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
-  protein: E2F4
-  serial_number: '0004'
-  slope_intercept: false
-  track_filename: hg19-0004-E2F4.bb
-  track_name: E2F4_0004(NS)
-  transform: true
-  width: 20
-- assembly: hg19
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GGAA
-  - GGAT
-  filter_threshold: 0.2244
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - ELK1_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
-  - ELK1_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
-  protein: ELK1
-  serial_number: '0005'
-  slope_intercept: false
-  track_filename: hg19-0005-ELK1.bb
-  track_name: ELK1_0005(NS)
-  transform: true
-  width: 20
-- assembly: hg19
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GGAA
-  - GGAT
-  filter_threshold: 0.2128
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - ETS1_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
-  - ETS1_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
-  protein: ETS1
-  serial_number: '0006'
-  slope_intercept: false
-  track_filename: hg19-0006-ETS1.bb
-  track_name: ETS1_0006(NS)
-  transform: true
-  width: 20
-- assembly: hg19
   author_identifier: NS
   core_start: null
   cores:
@@ -129,33 +7,7 @@
   - CACGCG
   - CACGTG
   - CATGCG
-  filter_threshold: 0.1837
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACATG_1a2a3mer_format.model
-  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGAG_1a2a3mer_format.model
-  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGCG_1a2a3mer_format.model
-  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGTG_1a2a3mer_format.model
-  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CATGCG_1a2a3mer_format.model
-  protein: HisMadMax
-  serial_number: '0007'
-  slope_intercept: false
-  track_filename: hg19-0007-HisMadMax.bb
-  track_name: HisMadMax_0007(NS)
-  transform: true
-  width: 20
-- assembly: hg19
-  author_identifier: NS
-  core_start: null
-  cores:
-  - CACATG
-  - CACGAG
-  - CACGCG
-  - CACGTG
-  - CATGCG
+  family: bHLH
   filter_threshold: 0.1619
   kmers:
   - 1
@@ -167,53 +19,11 @@
   - HisMycMax_Bound_filtered_normalized_transformed_20bp_CACGCG_1a2a3mer_format.model
   - HisMycMax_Bound_filtered_normalized_transformed_20bp_CACGTG_1a2a3mer_format.model
   - HisMycMax_Bound_filtered_normalized_transformed_20bp_CATGCG_1a2a3mer_format.model
-  protein: HisMycMax
-  serial_number: 0008
+  protein: c-Myc
+  serial_number: '0001'
   slope_intercept: false
-  track_filename: hg19-0008-HisMycMax.bb
-  track_name: HisMycMax_0008(NS)
-  transform: true
-  width: 20
-- assembly: hg19
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GCGC
-  - GCGG
-  filter_threshold: 0.2762
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
-  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
-  protein: E2F3
-  serial_number: 0009
-  slope_intercept: false
-  track_filename: hg19-0009-E2F3.bb
-  track_name: E2F3_0009(NS)
-  transform: true
-  width: 20
-- assembly: hg19
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GGAA
-  - GGAT
-  filter_threshold: 0.2888
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
-  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
-  protein: GABPA
-  serial_number: '0010'
-  slope_intercept: false
-  track_filename: hg19-0010-GABPA.bb
-  track_name: GABPA_0010(NS)
+  track_filename: hg19_0001_c-Myc.bb
+  track_name: c-Myc_0001
   transform: true
   width: 20
 - assembly: hg19
@@ -225,6 +35,35 @@
   - CACGCG
   - CACGTG
   - CATGCG
+  family: bHLH
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACATG_1a2a3mer_format.model
+  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGAG_1a2a3mer_format.model
+  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGCG_1a2a3mer_format.model
+  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGTG_1a2a3mer_format.model
+  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CATGCG_1a2a3mer_format.model
+  protein: Mad1
+  serial_number: '0002'
+  slope_intercept: false
+  track_filename: hg19_0002_Mad1.bb
+  track_name: Mad1_0002
+  transform: true
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - CACATG
+  - CACGAG
+  - CACGCG
+  - CACGTG
+  - CATGCG
+  family: bHLH
   filter_threshold: 0.2386
   kmers:
   - 1
@@ -236,11 +75,143 @@
   - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACGCG_1a2a3mer_format.model
   - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACGTG_1a2a3mer_format.model
   - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CATGCG_1a2a3mer_format.model
-  protein: HisMax
-  serial_number: '0011'
+  protein: Max
+  serial_number: '0003'
   slope_intercept: false
-  track_filename: hg19-0011-HisMax.bb
-  track_name: HisMax_0011(NS)
+  track_filename: hg19_0003_Max.bb
+  track_name: Max_0003
+  transform: true
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GGAA
+  - GGAT
+  family: ETS
+  filter_threshold: 0.2244
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - ELK1_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
+  - ELK1_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
+  protein: Elk1
+  serial_number: '0004'
+  slope_intercept: false
+  track_filename: hg19_0004_Elk1.bb
+  track_name: Elk1_0004
+  transform: true
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GGAA
+  - GGAT
+  family: ETS
+  filter_threshold: 0.2128
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - ETS1_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
+  - ETS1_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
+  protein: Ets1
+  serial_number: '0005'
+  slope_intercept: false
+  track_filename: hg19_0005_Ets1.bb
+  track_name: Ets1_0005
+  transform: true
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GGAA
+  - GGAT
+  family: ETS
+  filter_threshold: 0.2888
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
+  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
+  protein: Gabpa
+  serial_number: '0006'
+  slope_intercept: false
+  track_filename: hg19_0006_Gabpa.bb
+  track_name: Gabpa_0006
+  transform: true
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GCGC
+  - GCGG
+  family: E2F
+  filter_threshold: 0.1933
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
+  - E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
+  protein: E2f1
+  serial_number: '0007'
+  slope_intercept: false
+  track_filename: hg19_0007_E2f1.bb
+  track_name: E2f1_0007
+  transform: true
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GCGC
+  - GCGG
+  family: E2F
+  filter_threshold: 0.2762
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
+  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
+  protein: E2f3
+  serial_number: 0008
+  slope_intercept: false
+  track_filename: hg19_0008_E2f3.bb
+  track_name: E2f3_0008
+  transform: true
+  width: 20
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GCGC
+  - GCGG
+  family: E2F
+  filter_threshold: 0.162
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
+  - E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
+  protein: E2f4
+  serial_number: 0009
+  slope_intercept: false
+  track_filename: hg19_0009_E2f4.bb
+  track_name: E2f4_0009
   transform: true
   width: 20
 - assembly: hg19
@@ -254,6 +225,7 @@
   - GTGGC
   - GTGGG
   - GTGGT
+  family: RUNX
   filter_threshold: 0.3061
   kmers:
   - 1
@@ -268,10 +240,10 @@
   - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGG_1a2a3mer_format.model
   - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGT_1a2a3mer_format.model
   protein: Runx1
-  serial_number: '0012'
+  serial_number: '0010'
   slope_intercept: false
-  track_filename: hg19-0012-Runx1.bb
-  track_name: Runx1_0012(NS)
+  track_filename: hg19_0010_Runx1.bb
+  track_name: Runx1_0010
   transform: true
   width: 20
 - assembly: hg19
@@ -285,6 +257,7 @@
   - GTGGC
   - GTGGG
   - GTGGT
+  family: RUNX
   filter_threshold: 0.2711
   kmers:
   - 1
@@ -299,132 +272,10 @@
   - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGG_1a2a3mer_format.model
   - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGT_1a2a3mer_format.model
   protein: Runx2
-  serial_number: '0013'
+  serial_number: '0011'
   slope_intercept: false
-  track_filename: hg19-0013-Runx2.bb
-  track_name: Runx2_0013(NS)
-  transform: true
-  width: 20
-- assembly: hg38
-  author_identifier: JS
-  core_start: null
-  cores:
-  - CCGC
-  - GCGC
-  - GCGG
-  filter_threshold: 0.207
-  kmers:
-  - 3
-  model_filenames:
-  - E2F1-bestSVR.model
-  protein: E2F1
-  serial_number: '0001'
-  slope_intercept: true
-  track_filename: hg38-0001-E2F1-E2F1-bestSVR.model.bb
-  track_name: E2F1_0001(JS)
-  transform: false
-  width: 36
-- assembly: hg38
-  author_identifier: JS
-  core_start: null
-  cores:
-  - CCGC
-  - GCGC
-  - GCGG
-  filter_threshold: 0.207
-  kmers:
-  - 3
-  model_filenames:
-  - E2F4-bestSVR.model
-  protein: E2F4
-  serial_number: '0002'
-  slope_intercept: true
-  track_filename: hg38-0002-E2F4-E2F4-bestSVR.model.bb
-  track_name: E2F4_0002(JS)
-  transform: false
-  width: 36
-- assembly: hg38
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GCGC
-  - GCGG
-  filter_threshold: 0.1933
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
-  - E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
-  protein: E2F1
-  serial_number: '0003'
-  slope_intercept: false
-  track_filename: hg38-0003-E2F1.bb
-  track_name: E2F1_0003(NS)
-  transform: true
-  width: 20
-- assembly: hg38
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GCGC
-  - GCGG
-  filter_threshold: 0.162
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
-  - E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
-  protein: E2F4
-  serial_number: '0004'
-  slope_intercept: false
-  track_filename: hg38-0004-E2F4.bb
-  track_name: E2F4_0004(NS)
-  transform: true
-  width: 20
-- assembly: hg38
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GGAA
-  - GGAT
-  filter_threshold: 0.2244
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - ELK1_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
-  - ELK1_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
-  protein: ELK1
-  serial_number: '0005'
-  slope_intercept: false
-  track_filename: hg38-0005-ELK1.bb
-  track_name: ELK1_0005(NS)
-  transform: true
-  width: 20
-- assembly: hg38
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GGAA
-  - GGAT
-  filter_threshold: 0.2128
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - ETS1_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
-  - ETS1_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
-  protein: ETS1
-  serial_number: '0006'
-  slope_intercept: false
-  track_filename: hg38-0006-ETS1.bb
-  track_name: ETS1_0006(NS)
+  track_filename: hg19_0011_Runx2.bb
+  track_name: Runx2_0011
   transform: true
   width: 20
 - assembly: hg38
@@ -436,33 +287,7 @@
   - CACGCG
   - CACGTG
   - CATGCG
-  filter_threshold: 0.1837
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACATG_1a2a3mer_format.model
-  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGAG_1a2a3mer_format.model
-  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGCG_1a2a3mer_format.model
-  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGTG_1a2a3mer_format.model
-  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CATGCG_1a2a3mer_format.model
-  protein: HisMadMax
-  serial_number: '0007'
-  slope_intercept: false
-  track_filename: hg38-0007-HisMadMax.bb
-  track_name: HisMadMax_0007(NS)
-  transform: true
-  width: 20
-- assembly: hg38
-  author_identifier: NS
-  core_start: null
-  cores:
-  - CACATG
-  - CACGAG
-  - CACGCG
-  - CACGTG
-  - CATGCG
+  family: bHLH
   filter_threshold: 0.1619
   kmers:
   - 1
@@ -474,53 +299,11 @@
   - HisMycMax_Bound_filtered_normalized_transformed_20bp_CACGCG_1a2a3mer_format.model
   - HisMycMax_Bound_filtered_normalized_transformed_20bp_CACGTG_1a2a3mer_format.model
   - HisMycMax_Bound_filtered_normalized_transformed_20bp_CATGCG_1a2a3mer_format.model
-  protein: HisMycMax
-  serial_number: 0008
+  protein: c-Myc
+  serial_number: '0001'
   slope_intercept: false
-  track_filename: hg38-0008-HisMycMax.bb
-  track_name: HisMycMax_0008(NS)
-  transform: true
-  width: 20
-- assembly: hg38
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GCGC
-  - GCGG
-  filter_threshold: 0.2762
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
-  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
-  protein: E2F3
-  serial_number: 0009
-  slope_intercept: false
-  track_filename: hg38-0009-E2F3.bb
-  track_name: E2F3_0009(NS)
-  transform: true
-  width: 20
-- assembly: hg38
-  author_identifier: NS
-  core_start: null
-  cores:
-  - GGAA
-  - GGAT
-  filter_threshold: 0.2888
-  kmers:
-  - 1
-  - 2
-  - 3
-  model_filenames:
-  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
-  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
-  protein: GABPA
-  serial_number: '0010'
-  slope_intercept: false
-  track_filename: hg38-0010-GABPA.bb
-  track_name: GABPA_0010(NS)
+  track_filename: hg38_0001_c-Myc.bb
+  track_name: c-Myc_0001
   transform: true
   width: 20
 - assembly: hg38
@@ -532,6 +315,35 @@
   - CACGCG
   - CACGTG
   - CATGCG
+  family: bHLH
+  filter_threshold: 0.1837
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACATG_1a2a3mer_format.model
+  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGAG_1a2a3mer_format.model
+  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGCG_1a2a3mer_format.model
+  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CACGTG_1a2a3mer_format.model
+  - HisMadMax_Bound_filtered_normalized_transformed_20bp_CATGCG_1a2a3mer_format.model
+  protein: Mad1
+  serial_number: '0002'
+  slope_intercept: false
+  track_filename: hg38_0002_Mad1.bb
+  track_name: Mad1_0002
+  transform: true
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - CACATG
+  - CACGAG
+  - CACGCG
+  - CACGTG
+  - CATGCG
+  family: bHLH
   filter_threshold: 0.2386
   kmers:
   - 1
@@ -543,11 +355,143 @@
   - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACGCG_1a2a3mer_format.model
   - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CACGTG_1a2a3mer_format.model
   - HisMax_Bound_filtered_normalized_logistic_transformed_20bp_CATGCG_1a2a3mer_format.model
-  protein: HisMax
-  serial_number: '0011'
+  protein: Max
+  serial_number: '0003'
   slope_intercept: false
-  track_filename: hg38-0011-HisMax.bb
-  track_name: HisMax_0011(NS)
+  track_filename: hg38_0003_Max.bb
+  track_name: Max_0003
+  transform: true
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GGAA
+  - GGAT
+  family: ETS
+  filter_threshold: 0.2244
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - ELK1_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
+  - ELK1_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
+  protein: Elk1
+  serial_number: '0004'
+  slope_intercept: false
+  track_filename: hg38_0004_Elk1.bb
+  track_name: Elk1_0004
+  transform: true
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GGAA
+  - GGAT
+  family: ETS
+  filter_threshold: 0.2128
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - ETS1_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
+  - ETS1_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
+  protein: Ets1
+  serial_number: '0005'
+  slope_intercept: false
+  track_filename: hg38_0005_Ets1.bb
+  track_name: Ets1_0005
+  transform: true
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GGAA
+  - GGAT
+  family: ETS
+  filter_threshold: 0.2888
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAA_1a2a3mer_format.model
+  - GABPA_100nM_Bound_filtered_normalized_transformed_20bp_GGAT_1a2a3mer_format.model
+  protein: Gabpa
+  serial_number: '0006'
+  slope_intercept: false
+  track_filename: hg38_0006_Gabpa.bb
+  track_name: Gabpa_0006
+  transform: true
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GCGC
+  - GCGG
+  family: E2F
+  filter_threshold: 0.1933
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
+  - E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
+  protein: E2f1
+  serial_number: '0007'
+  slope_intercept: false
+  track_filename: hg38_0007_E2f1.bb
+  track_name: E2f1_0007
+  transform: true
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GCGC
+  - GCGG
+  family: E2F
+  filter_threshold: 0.2762
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
+  - E2F3_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
+  protein: E2f3
+  serial_number: 0008
+  slope_intercept: false
+  track_filename: hg38_0008_E2f3.bb
+  track_name: E2f3_0008
+  transform: true
+  width: 20
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GCGC
+  - GCGG
+  family: E2F
+  filter_threshold: 0.162
+  kmers:
+  - 1
+  - 2
+  - 3
+  model_filenames:
+  - E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model
+  - E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGG_1a2a3mer_format.model
+  protein: E2f4
+  serial_number: 0009
+  slope_intercept: false
+  track_filename: hg38_0009_E2f4.bb
+  track_name: E2f4_0009
   transform: true
   width: 20
 - assembly: hg38
@@ -561,6 +505,7 @@
   - GTGGC
   - GTGGG
   - GTGGT
+  family: RUNX
   filter_threshold: 0.3061
   kmers:
   - 1
@@ -575,10 +520,10 @@
   - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGG_1a2a3mer_format.model
   - Runx1_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGT_1a2a3mer_format.model
   protein: Runx1
-  serial_number: '0012'
+  serial_number: '0010'
   slope_intercept: false
-  track_filename: hg38-0012-Runx1.bb
-  track_name: Runx1_0012(NS)
+  track_filename: hg38_0010_Runx1.bb
+  track_name: Runx1_0010
   transform: true
   width: 20
 - assembly: hg38
@@ -592,6 +537,7 @@
   - GTGGC
   - GTGGG
   - GTGGT
+  family: RUNX
   filter_threshold: 0.2711
   kmers:
   - 1
@@ -606,9 +552,9 @@
   - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGG_1a2a3mer_format.model
   - Runx2_10nM_Bound_filtered_normalized_logistic_transformed_20bp_GTGGT_1a2a3mer_format.model
   protein: Runx2
-  serial_number: '0013'
+  serial_number: '0011'
   slope_intercept: false
-  track_filename: hg38-0013-Runx2.bb
-  track_name: Runx2_0013(NS)
+  track_filename: hg38_0011_Runx2.bb
+  track_name: Runx2_0011
   transform: true
   width: 20
