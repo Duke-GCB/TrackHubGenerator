@@ -6,10 +6,10 @@ import yaml
 
 def generate_track_dict(metadata):
     d = dict()
-    d['track_name'] = '{}_{}({})'.format(metadata['protein'], metadata['serial_number'], metadata['author_identifier'])
+    d['track_name'] = '{}_{}'.format(metadata['protein'], metadata['serial_number'])
     d['bigbed_url'] = metadata['track_filename']
-    d['short_label'] = '{}_{} binding'.format(metadata['protein'], metadata['serial_number'])
-    d['long_label'] = 'Predicted {} binding sites (site width = {})'.format(metadata['protein'], metadata['width'])
+    d['short_label'] = metadata['protein']
+    d['long_label'] = 'Predicted {} binding sites (site width = {}); iMADS model {}'.format(metadata['protein'], metadata['width'], metadata['serial_number'])
     return d
 
 def render_tracks(assembly, metadata_file):
