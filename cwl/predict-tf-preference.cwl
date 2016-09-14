@@ -24,7 +24,7 @@ inputs:
       position: 5
 
 outputs:
-  - id: "#output_file"
+  - id: "#output_bed_file"
     type: File
     outputBinding:
       glob: $(inputs.output_bed_file_name)
