@@ -10,8 +10,12 @@ inputs:
     type:
       type: array
       items: File
+  - id: "#tf1_threshold"
+    type: float
   - id: "#tf2"
     type: string
+  - id: "#tf2_threshold"
+    type: float
   - id: "#tf2_bed_files"
     type:
       type: array
@@ -23,11 +27,16 @@ inputs:
 #     type: string
 
 outputs:
-  - id: "#output_file"
+  - id: "#preferences_output_file"
     type:
       type: array
       items: File
     source: "#preferences.output_bed_file"
+  - id: "#thresholded_output_file"
+    type:
+      type: array
+      items: File
+    source: "#threshold.output_bed_file"
 
 steps:
   - id: "#preferences"
@@ -44,3 +53,19 @@ steps:
     - { id: "#preferences.output_bed_file_name", source: "#intermediate_output_file_name" }
     outputs:
     - { id: "#preferences.output_bed_file" }
+  - id: "#threshold"
+    run: { import: filter-tf-preference-threshold.cwl }
+    scatter:
+      - "#threshold.tf1_bed_file"
+      - "#threshold.tf2_bed_file"
+      - "#threshold.prefs_bed_file"
+    scatterMethod: dotproduct
+    inputs:
+    - { id: "#threshold.tf1_bed_file", source: "#tf1_bed_files" }
+    - { id: "#threshold.tf2_bed_file", source: "#tf2_bed_files" }
+    - { id: "#threshold.prefs_bed_file", source: "#preferences.output_bed_file" }
+    - { id: "#threshold.tf1_threshold", source: "#tf1_threshold" }
+    - { id: "#threshold.tf2_threshold", source: "#tf2_threshold" }
+    - { id: "#threshold.output_bed_file_name", source: "#intermediate_output_file_name" }
+    outputs:
+    - { id: "#threshold.output_bed_file" }

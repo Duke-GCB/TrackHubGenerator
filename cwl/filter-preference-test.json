@@ -1,0 +1,17 @@
+{
+    "tf1_threshold": 0.1933,
+    "tf2_threshold": 0.162,
+    "tf1_bed_file": {
+      "class" : "File",
+      "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/E2F1/E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model_chr10_predictions.bed"
+    },
+    "tf2_bed_file" : {
+      "class" : "File",
+      "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/E2F4/E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model_chr10_predictions.bed"
+    },
+    "prefs_bed_file" : {
+      "class" : "File",
+      "path" : "E2f1_vs_E2f4_GCGC_chr10.bed"
+    },
+    "output_bed_file_name" : "E2f1_vs_E2f4_GCGC_chr10_filtered.bed"
+}
