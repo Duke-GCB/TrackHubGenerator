@@ -1,0 +1,15 @@
+{
+    "tf1": "E2f1",
+    "tf1_bed_files" : [
+      {"class" : "File","path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/E2F1/E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model_chr1_predictions.bed"},
+      {"class" : "File","path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/E2F1/E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model_chr2_predictions.bed"},
+      {"class" : "File","path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/E2F1/E2F1_250nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model_chr3_predictions.bed"}
+    ],
+    "tf2": "E2f4",
+    "tf2_bed_files" : [
+      {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/E2F4/E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model_chr1_predictions.bed"},
+      {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/E2F4/E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model_chr2_predictions.bed"},
+      {"class" : "File", "path" : "/Users/dcl9/Data/tf-dna-predictions/results/hg38/E2F4/E2F4_500nM_Bound_filtered_normalized_logistic_transformed_20bp_GCGC_1a2a3mer_format.model_chr3_predictions.bed"}
+    ],
+    "output_bed_file_name" : "E2f1_vs_E2f4_GCGC_chr1-2-3.bed"
+}
