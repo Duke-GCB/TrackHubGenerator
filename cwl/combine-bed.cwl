@@ -10,6 +10,7 @@ inputs:
       position: 1
   - id: "#output_file_name"
     type: string
+    default: "combined.bed"
 outputs:
   - id: "#output_file"
     type: File

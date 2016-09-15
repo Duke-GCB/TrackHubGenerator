@@ -23,7 +23,7 @@ inputs:
       position: 5
   - id: "#output_bed_file_name"
     type: string
-    default: "preferences.bed"
+    default: "filtered-preferences.bed"
 
 outputs:
   - id: "#output_bed_file"

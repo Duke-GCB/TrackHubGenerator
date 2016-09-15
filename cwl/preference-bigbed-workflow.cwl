@@ -26,19 +26,13 @@ inputs:
     type: string
   - id: "#output_bigbed_file_name"
     type: string
-
 outputs:
-  - id: "#preferences_output_file"
-    type:
-      type: array
-      items: File
-    source: "#preferences.output_bed_file"
-  - id: "#thresholded_output_file"
-    type:
-      type: array
-      items: File
-    source: "#threshold.output_bed_file"
-
+  - id: "#output_file"
+    type: File
+    source: "#bed_to_bigbed.output_file"
+  - id: "#output_bed_file"
+    type: File
+    source: "#add_itemrgb_column.output_file"
 steps:
   - id: "#preferences"
     run: { import: predict-tf-preference.cwl }
@@ -51,7 +45,6 @@ steps:
     - { id: "#preferences.tf2", source: "#tf2" }
     - { id: "#preferences.tf1_bed_file", source: "#tf1_bed_files" }
     - { id: "#preferences.tf2_bed_file", source: "#tf2_bed_files" }
-    - { id: "#preferences.output_bed_file_name", source: "#intermediate_output_file_name" }
     outputs:
     - { id: "#preferences.output_bed_file" }
   - id: "#threshold"
@@ -67,15 +60,12 @@ steps:
     - { id: "#threshold.prefs_bed_file", source: "#preferences.output_bed_file" }
     - { id: "#threshold.tf1_threshold", source: "#tf1_threshold" }
     - { id: "#threshold.tf2_threshold", source: "#tf2_threshold" }
-    - { id: "#threshold.output_bed_file_name", source: "#intermediate_output_file_name" }
     outputs:
     - { id: "#threshold.output_bed_file" }
-# These steps from earlier workflow
   - id: "#combine"
     run: { import: combine-bed.cwl }
     inputs:
     - { id: "#combine.input_files", source: "#threshold.output_bed_file" }
-    - { id: "#combine.output_file_name", source: "#intermediate_output_file_name" }
     outputs:
     - { id: "#combine.output_file" }
   - id: "#sort"
