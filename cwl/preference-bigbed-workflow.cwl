@@ -90,12 +90,12 @@ steps:
     - { id: "#change_precision.input_file", source: "#sort.output_file" }
     outputs:
     - { id: "#change_precision.output_file" }
-  - id: "#add_score_column"
-    run: { import: add-score-column.cwl }
+  - id: "#add_itemrgb_column"
+    run: { import: add-itemrgb-column.cwl }
     inputs:
-    - { id: "#add_score_column.input_file", source: "#change_precision.output_file" }
+    - { id: "#add_itemrgb_column.input_file", source: "#change_precision.output_file" }
     outputs:
-    - { id: "#add_score_column.output_file" }
+    - { id: "#add_itemrgb_column.output_file" }
   - id: "#fetch_chrom_sizes"
     run: { import: fetch-chrom-sizes.cwl }
     inputs:
@@ -105,7 +105,7 @@ steps:
   - id: "#bed_to_bigbed"
     run: { import: bed-to-bigbed.cwl }
     inputs:
-    - { id: "#bed_to_bigbed.input_file", source: "#add_score_column.output_file" }
+    - { id: "#bed_to_bigbed.input_file", source: "#add_itemrgb_column.output_file" }
     - { id: "#bed_to_bigbed.chrom_sizes_file", source: "#fetch_chrom_sizes.output_file" }
     - { id: "#bed_to_bigbed.output_file_name", source: "#output_bigbed_file_name" }
     outputs:
