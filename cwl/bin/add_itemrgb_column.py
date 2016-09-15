@@ -27,7 +27,12 @@ def extreme_scores(input, source_index=COL_VALUE):
 
 def scale_rgb(base_tuple, scale):
     # The base tuple will be something like (255,0,0) and then multipled by the scale
-    return tuple([int(x * scale) for x in base_tuple])
+    # need to scale from white (255, 255, 255) to blue or red (0, 0, 255)
+    output = list()
+    for i, component in enumerate(WHITE):
+        scaled_component = int(component - (scale * (component - base_tuple[i])))
+        output.append(scaled_component)
+    return tuple(output)
 
 def add_intermediate_columns(row, start_index=COL_START):
     # Row should have
