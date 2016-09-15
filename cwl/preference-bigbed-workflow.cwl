@@ -22,6 +22,9 @@ inputs:
       items: File
   - id: "#intermediate_output_file_name"
     type: string
+  - id: "#score_precision"
+    type: int
+    default: 2
   - id: "#assembly"
     type: string
   - id: "#output_bigbed_file_name"
@@ -68,16 +71,23 @@ steps:
     - { id: "#combine.input_files", source: "#threshold.output_bed_file" }
     outputs:
     - { id: "#combine.output_file" }
+  - id: "#remove_zeroes"
+    run: { import: remove-zeroes.cwl }
+    inputs:
+    - { id: "#remove_zeroes.input_file", source: "#combine.output_file" }
+    outputs:
+    - { id: "#remove_zeroes.output_file" }
   - id: "#sort"
     run: { import: sort-bed.cwl }
     inputs:
-    - { id: "#sort.input_file", source: "#combine.output_file" }
+    - { id: "#sort.input_file", source: "#remove_zeroes.output_file" }
     outputs:
     - { id: "#sort.output_file" }
   - id: "change_precision"
     run: { import: change-precision.cwl }
     inputs:
     - { id: "#change_precision.input_file", source: "#sort.output_file" }
+    - { id: "#change_precision.precision", source: "#score_precision" }
     outputs:
     - { id: "#change_precision.output_file" }
   - id: "#add_itemrgb_column"
