@@ -4,12 +4,52 @@ from trackhub_utils import *
 import sys
 import argparse
 import csv
+from color import polylinear_gradient, RGB_to_hex, color_dict
 
-RED = (255,0,0)
-BLUE = (0,0,255)
-WHITE = (255, 255, 255)
+# Color constants for Red gradient
+# From Colorbrewer Red 9 http://colorbrewer2.org/?type=sequential&scheme=Reds&n=9
+REDS = (
+    (255, 245, 240),
+    (254, 224, 210),
+    (252, 187, 161),
+    (252, 146, 114),
+    (251, 106, 74),
+    (239, 59, 44),
+    (203, 24, 29),
+    (165, 15, 21),
+    (103, 0, 13),
+)
+
+# Color constants for blue gradient
+# Converted to RGB from R Color names
+# plotclr2 = c("midnightblue","steelblue4","steelblue","steelblue3","steelblue2","steelblue1")
+# using chart at http://research.stowers-institute.org/efg/R/Color/Chart/ColorChart.pdf
+
+BLUES = (
+    (25, 25, 112),    # midnightblue
+    (54, 100, 139),   # steelblue4
+    (70, 130, 180),   # steelblue
+    (79, 148, 205),   # steelblue3
+    (92, 172, 238),   # steelblue2
+    (99, 184, 255),   # steelblue1
+)
+
+GRADIENT_STEPS = 64
+RED_GRADIENT = polylinear_gradient([RGB_to_hex(x) for x in REDS], GRADIENT_STEPS)
+BLUE_GRADIENT = polylinear_gradient([RGB_to_hex(x) for x in BLUES], GRADIENT_STEPS)
+GRAY = (190, 190, 190)
+GRAY_GRADIENT = color_dict([GRAY])
 DEFAULT_SCORE = '0'
 DEFAULT_STRAND = '+'
+
+def scale_color(factor, gradient):
+    # Factor is 0.0 - 1.0
+    entries = len(gradient['hex'])
+    index = min(int(factor * entries), entries - 1)
+    return dict([(d, gradient[d][index]) for d in ['b','r','hex','g']])
+
+def color_to_string(color_dict):
+    return ','.join([str(color_dict[d]) for d in ('r','g','b')])
 
 def extreme_scores(input, source_index=COL_VALUE):
     """
@@ -24,15 +64,6 @@ def extreme_scores(input, source_index=COL_VALUE):
         elif score > 0.0:
             max_score = max(max_score, float(row[source_index]))
     return (min_score, max_score)
-
-def scale_rgb(base_tuple, scale):
-    # The base tuple will be something like (255,0,0) and then multipled by the scale
-    # need to scale from white (255, 255, 255) to blue or red (0, 0, 255)
-    output = list()
-    for i, component in enumerate(WHITE):
-        scaled_component = int(component - (scale * (component - base_tuple[i])))
-        output.append(scaled_component)
-    return tuple(output)
 
 def add_intermediate_columns(row, start_index=COL_START):
     # Row should have
@@ -50,13 +81,16 @@ def add_intermediate_columns(row, start_index=COL_START):
 def add_itemrgb_column(row, min_neg, max_pos, source_index=COL_VALUE):
     raw_value = float(row[source_index])
     if raw_value < 0.0:
-        base_tuple = RED
-        scale = raw_value / min_neg
+        gradient = RED_GRADIENT
+        factor = raw_value / min_neg
+    elif raw_value > 0.0:
+        gradient = BLUE_GRADIENT
+        factor = raw_value / max_pos
     else:
-        base_tuple = BLUE
-        scale = raw_value / max_pos
-    scaled_rgb = scale_rgb(base_tuple, scale)
-    output_rgb = ','.join([str(x) for x in scaled_rgb])
+        gradient = GRAY_GRADIENT
+        factor = 0.0
+    scaled_color = scale_color(factor, gradient)
+    output_rgb = color_to_string(scaled_color)
     row.append(output_rgb)
 
 def main(input, output):
