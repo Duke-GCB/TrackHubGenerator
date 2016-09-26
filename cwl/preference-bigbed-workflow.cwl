@@ -71,16 +71,10 @@ steps:
     - { id: "#combine.input_files", source: "#threshold.output_bed_file" }
     outputs:
     - { id: "#combine.output_file" }
-  - id: "#remove_zeroes"
-    run: { import: remove-zeroes.cwl }
-    inputs:
-    - { id: "#remove_zeroes.input_file", source: "#combine.output_file" }
-    outputs:
-    - { id: "#remove_zeroes.output_file" }
   - id: "#sort"
     run: { import: sort-bed.cwl }
     inputs:
-    - { id: "#sort.input_file", source: "#remove_zeroes.output_file" }
+    - { id: "#sort.input_file", source: "#combine.output_file" }
     outputs:
     - { id: "#sort.output_file" }
   - id: "change_precision"
