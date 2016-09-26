@@ -6,6 +6,9 @@ import argparse
 import csv
 from color import polylinear_gradient, RGB_to_hex, color_dict
 
+# Color constant for Gray
+GRAY = (190, 190, 190)
+
 # Color constants for Red gradient
 # From Colorbrewer Red 9 http://colorbrewer2.org/?type=sequential&scheme=Reds&n=9
 REDS = (
@@ -25,19 +28,20 @@ REDS = (
 # plotclr2 = c("midnightblue","steelblue4","steelblue","steelblue3","steelblue2","steelblue1")
 # using chart at http://research.stowers-institute.org/efg/R/Color/Chart/ColorChart.pdf
 
+# midnightblue is the darkest, should be associated with the highest value,
+# and therefore be last.
 BLUES = (
-    (25, 25, 112),    # midnightblue
-    (54, 100, 139),   # steelblue4
-    (70, 130, 180),   # steelblue
-    (79, 148, 205),   # steelblue3
-    (92, 172, 238),   # steelblue2
     (99, 184, 255),   # steelblue1
+    (92, 172, 238),   # steelblue2
+    (79, 148, 205),   # steelblue3
+    (70, 130, 180),   # steelblue
+    (54, 100, 139),   # steelblue4
+    (25, 25, 112),    # midnightblue
 )
 
 GRADIENT_STEPS = 64
 RED_GRADIENT = polylinear_gradient([RGB_to_hex(x) for x in REDS], GRADIENT_STEPS)
 BLUE_GRADIENT = polylinear_gradient([RGB_to_hex(x) for x in BLUES], GRADIENT_STEPS)
-GRAY = (190, 190, 190)
 GRAY_GRADIENT = color_dict([GRAY])
 DEFAULT_SCORE = '0'
 DEFAULT_STRAND = '+'
@@ -81,10 +85,10 @@ def add_intermediate_columns(row, start_index=COL_START):
 def add_itemrgb_column(row, min_neg, max_pos, source_index=COL_VALUE):
     raw_value = float(row[source_index])
     if raw_value < 0.0:
-        gradient = RED_GRADIENT
+        gradient = BLUE_GRADIENT
         factor = raw_value / min_neg
     elif raw_value > 0.0:
-        gradient = BLUE_GRADIENT
+        gradient = RED_GRADIENT
         factor = raw_value / max_pos
     else:
         gradient = GRAY_GRADIENT
