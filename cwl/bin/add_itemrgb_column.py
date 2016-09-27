@@ -45,6 +45,7 @@ BLUE_GRADIENT = polylinear_gradient([RGB_to_hex(x) for x in BLUES], GRADIENT_STE
 GRAY_GRADIENT = color_dict([GRAY])
 DEFAULT_SCORE = '0'
 DEFAULT_STRAND = '+'
+BLOCK_COUNT = '0'
 
 def scale_color(factor, gradient):
     # Factor is 0.0 - 1.0
@@ -82,6 +83,9 @@ def add_intermediate_columns(row, start_index=COL_START):
     row.append(row[start_index])
     row.append(row[start_index])
 
+def add_block_count_column(row):
+    row.append(BLOCK_COUNT)
+
 def add_itemrgb_column(row, min_neg, max_pos, source_index=COL_VALUE):
     raw_value = float(row[source_index])
     if raw_value < 0.0:
@@ -114,6 +118,7 @@ def main(input, output):
     for row in reader:
         add_intermediate_columns(row)
         add_itemrgb_column(row, min_neg, max_pos)
+        add_block_count_column(row)
         writer.writerow(row)
 
 if __name__ == '__main__':
