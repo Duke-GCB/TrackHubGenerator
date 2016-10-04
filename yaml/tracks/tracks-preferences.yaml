@@ -1,0 +1,15 @@
+- assembly: hg19
+  track_filename: hg19_0002_vs_Mad1_0001_c-Myc.bb
+  track_name: Mad1_vs_c-Myc
+  author_identifier: NS
+  core_start: null
+  cores:
+  - CACATG
+  - CACGAG
+  - CACGCG
+  - CACGTG
+  - CATGCG
+  family: bHLH
+  proteins: ['Mad1','c-Myc']
+  filter_thresholds: [0.1837,0.1619]
+  serial_numbers: ['0002','0001']

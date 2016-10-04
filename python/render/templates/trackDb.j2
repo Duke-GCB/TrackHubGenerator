@@ -3,9 +3,10 @@ track {{ t.track_name }}
 bigDataUrl {{ t.bigbed_url }}
 shortLabel {{ t.short_label }}
 longLabel {{ t.long_label }}
-type {{ t.type | default('bigBed 5 .') }}
+type {{ t.type }}
 visibility {{ t.visibility | default('dense') }}
 priority {{ t.priority | default('20') }}
-spectrum {{ t.spectrum | default('on') }}
+spectrum {{ t.spectrum }}
+itemRgb {{ t.itemRgb }}
 
 {% endfor %}

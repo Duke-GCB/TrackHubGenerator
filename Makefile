@@ -4,6 +4,7 @@
 HUBROOT=./hubroot
 YAMLROOT=./yaml
 PYTHON=python
+MODE=predictions
 
 .PHONY: hubroot
 
@@ -21,13 +22,13 @@ tracks: hubroot $(HUBROOT)/hg19/trackDb.txt $(HUBROOT)/hg38/trackDb.txt
 # Writing explicit rules here since make < 3.81 can't figure out which to use
 
 $(HUBROOT)/hub.txt:
-	$(PYTHON) python/render/render.py $(YAMLROOT)/hub/hub.yaml hub > $@
+	$(PYTHON) python/render/render.py $(YAMLROOT)/hub/hub-$(MODE).yaml hub > $@
 
 $(HUBROOT)/genomes.txt:
 	$(PYTHON) python/render/render.py $(YAMLROOT)/genomes/genomes.yaml genomes > $@
 
 $(HUBROOT)/%/trackDb.txt:
-	$(PYTHON) python/render/render_tracks.py --assembly $* $(YAMLROOT)/tracks/tracks.yaml > $@
+	$(PYTHON) python/render/render_tracks.py --assembly $* --mode $(MODE) $(YAMLROOT)/tracks/tracks-$(MODE).yaml > $@
 
 bigbeds:
 	cp $(DATA)/*hg19*.bb $(HUBROOT)/hg19
