@@ -1,5 +1,5 @@
 # Makefile for generating track hub directory
-# Requires setting BIGBEDS to a directory of .bb files with hg19/hg38 somewhere in the filename
+# Requires setting DATA to a directory of .bb files with hg19/hg38 somewhere in the filename
 
 HUBROOT=./hubroot
 YAMLROOT=./yaml
