@@ -1,0 +1,196 @@
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GGAA
+  - GGAT
+  family: ETS
+  filter_thresholds:
+  - 0.2244
+  - 0.2128
+  proteins:
+  - Elk1
+  - Ets1
+  serial_numbers:
+  - '0004'
+  - '0005'
+  track_filename: hg19_Elk1_0004_vs_Ets1_0005.bb
+  track_name: Elk1_vs_Ets1
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GCGC
+  - GCGG
+  family: E2F
+  filter_thresholds:
+  - 0.1933
+  - 0.162
+  proteins:
+  - E2f1
+  - E2f4
+  serial_numbers:
+  - '0007'
+  - 0009
+  track_filename: hg19_E2f1_0007_vs_E2f4_0009.bb
+  track_name: E2f1_vs_E2f4
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GCGC
+  - GCGG
+  family: E2F
+  filter_thresholds:
+  - 0.1933
+  - 0.2762
+  proteins:
+  - E2f1
+  - E2f3
+  serial_numbers:
+  - '0007'
+  - 0008
+  track_filename: hg19_E2f1_0007_vs_E2f3_0008.bb
+  track_name: E2f1_vs_E2f3
+- assembly: hg19
+  author_identifier: NS
+  core_start: null
+  cores:
+  - CACATG
+  - CACGAG
+  - CACGCG
+  - CACGTG
+  - CATGCG
+  family: bHLH
+  filter_thresholds:
+  - 0.1837
+  - 0.1619
+  proteins:
+  - Mad1
+  - c-Myc
+  serial_numbers:
+  - '0002'
+  - '0001'
+  track_filename: hg19_Mad1_0002_vs_c-Myc_0001.bb
+  track_name: Mad1_vs_c-Myc
+- assembly: hg19
+  author_identifier: NS
+  core_start: 8
+  cores:
+  - GAGGT
+  - GCGGC
+  - GCGGG
+  - GCGGT
+  - GTGGC
+  - GTGGG
+  - GTGGT
+  family: RUNX
+  filter_thresholds:
+  - 0.3061
+  - 0.2711
+  proteins:
+  - Runx1
+  - Runx2
+  serial_numbers:
+  - '0010'
+  - '0011'
+  track_filename: hg19_Runx1_0010_vs_Runx2_0011.bb
+  track_name: Runx1_vs_Runx2
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GGAA
+  - GGAT
+  family: ETS
+  filter_thresholds:
+  - 0.2244
+  - 0.2128
+  proteins:
+  - Elk1
+  - Ets1
+  serial_numbers:
+  - '0004'
+  - '0005'
+  track_filename: hg38_Elk1_0004_vs_Ets1_0005.bb
+  track_name: Elk1_vs_Ets1
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GCGC
+  - GCGG
+  family: E2F
+  filter_thresholds:
+  - 0.1933
+  - 0.162
+  proteins:
+  - E2f1
+  - E2f4
+  serial_numbers:
+  - '0007'
+  - 0009
+  track_filename: hg38_E2f1_0007_vs_E2f4_0009.bb
+  track_name: E2f1_vs_E2f4
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - GCGC
+  - GCGG
+  family: E2F
+  filter_thresholds:
+  - 0.1933
+  - 0.2762
+  proteins:
+  - E2f1
+  - E2f3
+  serial_numbers:
+  - '0007'
+  - 0008
+  track_filename: hg38_E2f1_0007_vs_E2f3_0008.bb
+  track_name: E2f1_vs_E2f3
+- assembly: hg38
+  author_identifier: NS
+  core_start: null
+  cores:
+  - CACATG
+  - CACGAG
+  - CACGCG
+  - CACGTG
+  - CATGCG
+  family: bHLH
+  filter_thresholds:
+  - 0.1837
+  - 0.1619
+  proteins:
+  - Mad1
+  - c-Myc
+  serial_numbers:
+  - '0002'
+  - '0001'
+  track_filename: hg38_Mad1_0002_vs_c-Myc_0001.bb
+  track_name: Mad1_vs_c-Myc
+- assembly: hg38
+  author_identifier: NS
+  core_start: 8
+  cores:
+  - GAGGT
+  - GCGGC
+  - GCGGG
+  - GCGGT
+  - GTGGC
+  - GTGGG
+  - GTGGT
+  family: RUNX
+  filter_thresholds:
+  - 0.3061
+  - 0.2711
+  proteins:
+  - Runx1
+  - Runx2
+  serial_numbers:
+  - '0010'
+  - '0011'
+  track_filename: hg38_Runx1_0010_vs_Runx2_0011.bb
+  track_name: Runx1_vs_Runx2

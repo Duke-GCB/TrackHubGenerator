@@ -1,0 +1,13 @@
+hub:
+  name: DukeGCBHub_TFDNA
+  short_label: Duke GCB - TF-DNA Binding Preferences
+  long_label:
+    prefix: Preferences of in vitro TF-DNA binding levels on
+    tfs:
+      - c-Myc vs. Mad1
+      - Elk1 vs. Ets1
+      - E2f1 vs. E2f3
+      - E2f1 vs. E2f4
+      - Runx1 vs. Runx2
+    suffix: according to SVR models trained on gcPBM data
+  email: gcb-contact@duke.edu
