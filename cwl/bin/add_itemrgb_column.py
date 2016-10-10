@@ -63,7 +63,6 @@ def main(input, output):
     Adds columns to a bed file for itemRGB
     :param input: An input stream or open file
     :param output: An output stream
-    :param source_index: Column index containing the source value
     :return:
     """
     pos_labels = [label_from_rgb_tuple(t) for t in REDS]
