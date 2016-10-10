@@ -4,7 +4,7 @@ from trackhub_utils import *
 import sys
 import argparse
 import csv
-from color import polylinear_gradient, RGB_to_hex, color_dict
+import pandas
 
 # Color constant for Gray
 GRAY = (190, 190, 190)
@@ -28,46 +28,22 @@ REDS = (
 # plotclr2 = c("midnightblue","steelblue4","steelblue","steelblue3","steelblue2","steelblue1")
 # using chart at http://research.stowers-institute.org/efg/R/Color/Chart/ColorChart.pdf
 
-# midnightblue is the darkest, should be associated with the highest value,
-# and therefore be last.
+# midnightblue is the darkest, should be associated with the most extreme value,
+# and therefore be first.
 BLUES = (
-    (99, 184, 255),   # steelblue1
-    (92, 172, 238),   # steelblue2
-    (79, 148, 205),   # steelblue3
-    (70, 130, 180),   # steelblue
-    (54, 100, 139),   # steelblue4
     (25, 25, 112),    # midnightblue
+    (54, 100, 139),   # steelblue4
+    (70, 130, 180),   # steelblue
+    (79, 148, 205),   # steelblue3
+    (92, 172, 238),   # steelblue2
+    (99, 184, 255),   # steelblue1
 )
 
-GRADIENT_STEPS = 64
-RED_GRADIENT = polylinear_gradient([RGB_to_hex(x) for x in REDS], GRADIENT_STEPS)
-BLUE_GRADIENT = polylinear_gradient([RGB_to_hex(x) for x in BLUES], GRADIENT_STEPS)
-GRAY_GRADIENT = color_dict([GRAY])
 DEFAULT_SCORE = '0'
 DEFAULT_STRAND = '+'
 
-def scale_color(factor, gradient):
-    # Factor is 0.0 - 1.0
-    entries = len(gradient['hex'])
-    index = min(int(factor * entries), entries - 1)
-    return dict([(d, gradient[d][index]) for d in ['b','r','hex','g']])
-
-def color_to_string(color_dict):
-    return ','.join([str(color_dict[d]) for d in ('r','g','b')])
-
-def extreme_scores(input, source_index=COL_VALUE):
-    """
-    Returns the minimum negative and maximum positive scores
-    """
-    reader = csv.reader(input, delimiter='\t')
-    min_score, max_score = 0.0, 0.0
-    for row in reader:
-        score = float(row[source_index])
-        if score < 0.0:
-            min_score = min(min_score, score)
-        elif score > 0.0:
-            max_score = max(max_score, float(row[source_index]))
-    return (min_score, max_score)
+def label_from_rgb_tuple(rgb_tuple):
+    return ','.join([str(c) for c in rgb_tuple])
 
 def add_intermediate_columns(row, start_index=COL_START):
     # Row should have
@@ -82,21 +58,6 @@ def add_intermediate_columns(row, start_index=COL_START):
     row.append(row[start_index])
     row.append(row[start_index])
 
-def add_itemrgb_column(row, min_neg, max_pos, source_index=COL_VALUE):
-    raw_value = float(row[source_index])
-    if raw_value < 0.0:
-        gradient = BLUE_GRADIENT
-        factor = raw_value / min_neg
-    elif raw_value > 0.0:
-        gradient = RED_GRADIENT
-        factor = raw_value / max_pos
-    else:
-        gradient = GRAY_GRADIENT
-        factor = 0.0
-    scaled_color = scale_color(factor, gradient)
-    output_rgb = color_to_string(scaled_color)
-    row.append(output_rgb)
-
 def main(input, output):
     """
     Adds columns to a bed file for itemRGB
@@ -105,15 +66,19 @@ def main(input, output):
     :param source_index: Column index containing the source value
     :return:
     """
-    # First, get the minimum and maximum values
-    min_neg, max_pos = extreme_scores(input)
-    # Second, determine positive and negative scale
-    input.seek(0)
-    reader = csv.reader(input, delimiter='\t')
+    pos_labels = [label_from_rgb_tuple(t) for t in REDS]
+    neg_labels = [label_from_rgb_tuple(t) for t in BLUES]
+    names = ['chrom','start','end','pref']
+    data = pandas.read_table(input, names=names, delimiter=' ')
+    # Assign color labels based on quantile cutting
+    data.loc[data['pref'] == 0, 'label'] = label_from_rgb_tuple(GRAY)
+    data.loc[data['pref'] > 0, 'label'] = pandas.qcut(data[data['pref'] > 0]['pref'], len(pos_labels), labels=pos_labels)
+    data.loc[data['pref'] < 0, 'label'] = pandas.qcut(data[data['pref'] < 0]['pref'], len(neg_labels), labels=neg_labels)
     writer = csv.writer(output, delimiter='\t')
-    for row in reader:
+    for idx, input_row in data.iterrows():
+        row = [input_row[name] for name in names]
         add_intermediate_columns(row)
-        add_itemrgb_column(row, min_neg, max_pos)
+        row.append(input_row['label'])
         writer.writerow(row)
 
 if __name__ == '__main__':
