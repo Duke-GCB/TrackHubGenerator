@@ -40,7 +40,7 @@ BLUES = (
 )
 
 DEFAULT_SCORE = '0'
-DEFAULT_STRAND = '+'
+DEFAULT_STRAND = '.'
 
 def label_from_rgb_tuple(rgb_tuple):
     return ','.join([str(c) for c in rgb_tuple])
