@@ -68,7 +68,7 @@ def main(input, output):
     pos_labels = [label_from_rgb_tuple(t) for t in REDS]
     neg_labels = [label_from_rgb_tuple(t) for t in BLUES]
     names = ['chrom','start','end','pref']
-    data = pandas.read_table(input, names=names, delimiter=' ')
+    data = pandas.read_table(input, names=names, delimiter='\t')
     # Assign color labels based on quantile cutting
     data.loc[data['pref'] == 0, 'label'] = label_from_rgb_tuple(GRAY)
     data.loc[data['pref'] > 0, 'label'] = pandas.qcut(data[data['pref'] > 0]['pref'], len(pos_labels), labels=pos_labels)
