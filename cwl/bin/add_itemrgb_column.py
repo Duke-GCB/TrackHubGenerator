@@ -45,7 +45,7 @@ DEFAULT_STRAND = '+'
 def label_from_rgb_tuple(rgb_tuple):
     return ','.join([str(c) for c in rgb_tuple])
 
-def add_intermediate_columns(row, start_index=COL_START):
+def add_intermediate_columns(row, start_index=COL_START, end_index=COL_END):
     # Row should have
     # 0. chrom
     # 1. chromStart
@@ -55,8 +55,9 @@ def add_intermediate_columns(row, start_index=COL_START):
     row.append(DEFAULT_SCORE)
     row.append(DEFAULT_STRAND)
     # When there is no thick part, thickStart and thickEnd are usually set to the chromStart position.
+    # To make tracks same height as spectrum tracks, set thickEnd to COL_END
     row.append(row[start_index])
-    row.append(row[start_index])
+    row.append(row[end_index])
 
 def main(input, output):
     """
