@@ -25,7 +25,7 @@
   - '0005'
   slope_intercept: false
   track_filename: hg19_Elk1_0004_vs_Ets1_0005.bb
-  track_name: Elk1_vs_Ets1
+  track_name: Elk1_0004_vs_Ets1_0005
   transform: true
   width: 20
 - assembly: hg19
@@ -55,7 +55,7 @@
   - '0006'
   slope_intercept: false
   track_filename: hg19_Elk1_0004_vs_Gabpa_0006.bb
-  track_name: Elk1_vs_Gabpa
+  track_name: Elk1_0004_vs_Gabpa_0006
   transform: true
   width: 20
 - assembly: hg19
@@ -85,7 +85,7 @@
   - '0006'
   slope_intercept: false
   track_filename: hg19_Ets1_0005_vs_Gabpa_0006.bb
-  track_name: Ets1_vs_Gabpa
+  track_name: Ets1_0005_vs_Gabpa_0006
   transform: true
   width: 20
 - assembly: hg19
@@ -115,7 +115,7 @@
   - 0009
   slope_intercept: false
   track_filename: hg19_E2f1_0007_vs_E2f4_0009.bb
-  track_name: E2f1_vs_E2f4
+  track_name: E2f1_0007_vs_E2f4_0009
   transform: true
   width: 20
 - assembly: hg19
@@ -145,7 +145,7 @@
   - 0008
   slope_intercept: false
   track_filename: hg19_E2f1_0007_vs_E2f3_0008.bb
-  track_name: E2f1_vs_E2f3
+  track_name: E2f1_0007_vs_E2f3_0008
   transform: true
   width: 20
 - assembly: hg19
@@ -175,7 +175,7 @@
   - 0009
   slope_intercept: false
   track_filename: hg19_E2f3_0008_vs_E2f4_0009.bb
-  track_name: E2f3_vs_E2f4
+  track_name: E2f3_0008_vs_E2f4_0009
   transform: true
   width: 20
 - assembly: hg19
@@ -214,7 +214,7 @@
   - '0001'
   slope_intercept: false
   track_filename: hg19_Mad1_0002_vs_c-Myc_0001.bb
-  track_name: Mad1_vs_c-Myc
+  track_name: Mad1_0002_vs_c-Myc_0001
   transform: true
   width: 20
 - assembly: hg19
@@ -253,7 +253,7 @@
   - '0003'
   slope_intercept: false
   track_filename: hg19_Mad1_0002_vs_Max_0003.bb
-  track_name: Mad1_vs_Max
+  track_name: Mad1_0002_vs_Max_0003
   transform: true
   width: 20
 - assembly: hg19
@@ -292,7 +292,7 @@
   - '0001'
   slope_intercept: false
   track_filename: hg19_Max_0003_vs_c-Myc_0001.bb
-  track_name: Max_vs_c-Myc
+  track_name: Max_0003_vs_c-Myc_0001
   transform: true
   width: 20
 - assembly: hg19
@@ -337,7 +337,7 @@
   - '0011'
   slope_intercept: false
   track_filename: hg19_Runx1_0010_vs_Runx2_0011.bb
-  track_name: Runx1_vs_Runx2
+  track_name: Runx1_0010_vs_Runx2_0011
   transform: true
   width: 20
 - assembly: hg38
@@ -367,7 +367,7 @@
   - '0005'
   slope_intercept: false
   track_filename: hg38_Elk1_0004_vs_Ets1_0005.bb
-  track_name: Elk1_vs_Ets1
+  track_name: Elk1_0004_vs_Ets1_0005
   transform: true
   width: 20
 - assembly: hg38
@@ -397,7 +397,7 @@
   - '0006'
   slope_intercept: false
   track_filename: hg38_Elk1_0004_vs_Gabpa_0006.bb
-  track_name: Elk1_vs_Gabpa
+  track_name: Elk1_0004_vs_Gabpa_0006
   transform: true
   width: 20
 - assembly: hg38
@@ -427,7 +427,7 @@
   - '0006'
   slope_intercept: false
   track_filename: hg38_Ets1_0005_vs_Gabpa_0006.bb
-  track_name: Ets1_vs_Gabpa
+  track_name: Ets1_0005_vs_Gabpa_0006
   transform: true
   width: 20
 - assembly: hg38
@@ -457,7 +457,7 @@
   - 0009
   slope_intercept: false
   track_filename: hg38_E2f1_0007_vs_E2f4_0009.bb
-  track_name: E2f1_vs_E2f4
+  track_name: E2f1_0007_vs_E2f4_0009
   transform: true
   width: 20
 - assembly: hg38
@@ -487,7 +487,7 @@
   - 0008
   slope_intercept: false
   track_filename: hg38_E2f1_0007_vs_E2f3_0008.bb
-  track_name: E2f1_vs_E2f3
+  track_name: E2f1_0007_vs_E2f3_0008
   transform: true
   width: 20
 - assembly: hg38
@@ -517,7 +517,7 @@
   - 0009
   slope_intercept: false
   track_filename: hg38_E2f3_0008_vs_E2f4_0009.bb
-  track_name: E2f3_vs_E2f4
+  track_name: E2f3_0008_vs_E2f4_0009
   transform: true
   width: 20
 - assembly: hg38
@@ -556,7 +556,7 @@
   - '0001'
   slope_intercept: false
   track_filename: hg38_Mad1_0002_vs_c-Myc_0001.bb
-  track_name: Mad1_vs_c-Myc
+  track_name: Mad1_0002_vs_c-Myc_0001
   transform: true
   width: 20
 - assembly: hg38
@@ -595,7 +595,7 @@
   - '0003'
   slope_intercept: false
   track_filename: hg38_Mad1_0002_vs_Max_0003.bb
-  track_name: Mad1_vs_Max
+  track_name: Mad1_0002_vs_Max_0003
   transform: true
   width: 20
 - assembly: hg38
@@ -634,7 +634,7 @@
   - '0001'
   slope_intercept: false
   track_filename: hg38_Max_0003_vs_c-Myc_0001.bb
-  track_name: Max_vs_c-Myc
+  track_name: Max_0003_vs_c-Myc_0001
   transform: true
   width: 20
 - assembly: hg38
@@ -679,6 +679,6 @@
   - '0011'
   slope_intercept: false
   track_filename: hg38_Runx1_0010_vs_Runx2_0011.bb
-  track_name: Runx1_vs_Runx2
+  track_name: Runx1_0010_vs_Runx2_0011
   transform: true
   width: 20
